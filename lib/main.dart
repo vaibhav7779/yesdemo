@@ -4,6 +4,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:sar/pages/common/adharConfirmation.dart';
 import 'package:sar/pages/common/preApproved.dart';
+import 'package:sar/pages/homePage.dart';
+// import 'package:sar/pages/homePage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -57,7 +59,7 @@ class _MyAppState extends State<MyApp> {
       //     return const HomePage();
       //   },
       // ),
-      home: CustomerConfirmation(),
+      home: HomePage(),
       // home: BasicInformation(),
       theme: ThemeData(
         // AppBar theme

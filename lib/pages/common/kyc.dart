@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sar/pages/KYCcompleted.dart';
 import 'package:sar/pages/common/videoKyc.dart';
 
 enum ProductType { Gold, Silver, Dimond, Blank }
@@ -177,7 +178,7 @@ class _KYCState extends State<KYC> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => VideoKYC(),
+                          builder: (context) => KYCcompleted(),
                         ),
                       );
                     },

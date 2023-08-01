@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sar/pages/AddressConfirmation.dart';
 
 enum ProductType { Gold, Silver, Dimond, Blank }
 
@@ -200,7 +201,7 @@ class _SavingsAccountState extends State<SavingsAccount> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => SavingsAccount(),
+                          builder: (context) => AddressConfirmation(),
                         ),
                       );
                     },

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sar/pages/AddressConfirmation.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 enum ProductType { Gold, Silver, Dimond, Blank }
 
@@ -40,7 +41,18 @@ class _SavingsAccountState extends State<SavingsAccount> {
               const Text(
                   'You are being assisted by our bank representative Sakshi',
                   style: TextStyle(fontSize: 18)),
-              const Text("Progress bar"),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Align(alignment: Alignment.topRight, child: Text("2/4"))
+                ],
+              ),
+              const SizedBox(height: 10),
+              const StepProgressIndicator(
+                totalSteps: 4,
+                currentStep: 2,
+                selectedColor: Color(0xff022DDB),
+              ),
               const SizedBox(
                 height: 40,
               ),

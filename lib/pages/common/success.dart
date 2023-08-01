@@ -1,6 +1,9 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart' as intl;
 import 'package:sar/global.dart' as globals;
+
 import 'package:sar/pages/common/adharConfirmation.dart';
 
 class Success extends StatefulWidget {
@@ -15,7 +18,7 @@ class _SuccessState extends State<Success> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Personal Loan"),
+        title: const Text("Savings Account"),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),
@@ -52,7 +55,7 @@ class _SuccessState extends State<Success> {
                   child: Column(
                     children: [
                       SizedBox(
-                        child: Image.asset('assets/success.gif'),
+                        child: Image.asset('assets/rocket.gif'),
                       ),
                       const Text(
                         'Thank you for your details',
@@ -81,8 +84,15 @@ class _SuccessState extends State<Success> {
                 child: SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {},
-                    child: const Text("Proceed"),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Success(),
+                        ),
+                      );
+                    },
+                    child: const Text("Submit"),
                   ),
                 ),
               )

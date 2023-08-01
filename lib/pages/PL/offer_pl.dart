@@ -1,24 +1,27 @@
-// ignore_for_file: unused_import
-
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart' as intl;
 import 'package:sar/global.dart' as globals;
+import 'package:sar/pages/PL/adharConfirmation.dart';
 
-import 'package:sar/pages/common/adharConfirmation.dart';
-
-class Success extends StatefulWidget {
-  const Success({super.key});
+class PreApprovedOfferPL extends StatefulWidget {
+  const PreApprovedOfferPL({super.key});
 
   @override
-  State<Success> createState() => _SuccessState();
+  State<PreApprovedOfferPL> createState() => _PreApprovedOfferPLState();
 }
 
-class _SuccessState extends State<Success> {
+class _PreApprovedOfferPLState extends State<PreApprovedOfferPL> {
+  var format = intl.NumberFormat.currency(
+    locale: 'en_IN',
+    decimalDigits: 0, // change it to get decimal places
+    symbol: '₹ ',
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Savings Account"),
+        title: const Text("Personal Loan"),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),
@@ -37,7 +40,7 @@ class _SuccessState extends State<Success> {
               const SizedBox(
                 height: 20,
               ),
-              const Text("Hi Sakshi,"),
+              const Text("Hello Sakshi, you are just a few steps away"),
               const SizedBox(
                 height: 20,
               ),
@@ -55,10 +58,10 @@ class _SuccessState extends State<Success> {
                   child: Column(
                     children: [
                       SizedBox(
-                        child: Image.asset('assets/rocket.gif'),
+                        child: Image.asset('assets/success.gif'),
                       ),
                       const Text(
-                        'Thank you for your details',
+                        'Congratulations',
                         style: TextStyle(
                           color: Color(0xff0025BA),
                           fontSize: 16,
@@ -67,10 +70,24 @@ class _SuccessState extends State<Success> {
                       ),
                       const SizedBox(height: 10),
                       const Text(
-                        'KYC completion is subject to further checks. We will send the update on your registered mobile number ending with 8767',
+                        'You have been approved for a personal loan of',
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      ShaderMask(
+                        shaderCallback: (bounds) => const LinearGradient(
+                          colors: [Color(0xff022DDB), Color(0xff0026Bf)],
+                        ).createShader(bounds),
+                        child: Text(
+                          format.format(globals.amount),
+                          style: TextStyle(
+                            fontSize: 34.0,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w700,
+                          ),
                         ),
                       ),
                       const SizedBox(height: 10),
@@ -88,11 +105,11 @@ class _SuccessState extends State<Success> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Success(),
+                          builder: (context) => CustomerConfirmationPL(),
                         ),
                       );
                     },
-                    child: const Text("Submit"),
+                    child: const Text("Proceed"),
                   ),
                 ),
               )

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sar/pages/AddressConfirmation.dart';
+import 'package:sar/pages/PL/offer_pl.dart';
+// import 'package:sar/pages/AddressConfirmation.dart';
+// import 'package:sar/pages/PL/offer_hl.dart';
 import 'package:sar/pages/Savings_account.dart';
-import 'package:sar/pages/common/preApproved.dart';
-import 'package:sar/pages/common/success.dart';
 //import 'package:sar/pages/login.dart';
 
 class SelectProduct extends StatefulWidget {
@@ -148,7 +148,7 @@ class _SelectProductState extends State<SelectProduct> {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (context) =>
-                                  PreApprovedOffer(), //Change to valid path
+                                  PreApprovedOfferPL(), //Change to valid path
                             ),
                           );
                         },
@@ -197,7 +197,7 @@ class _SelectProductState extends State<SelectProduct> {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (context) =>
-                                  PreApprovedOffer(), //Change to valid path
+                                  PreApprovedOfferPL(), //Change to valid path
                             ),
                           );
                         },
@@ -244,7 +244,7 @@ class _SelectProductState extends State<SelectProduct> {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (context) =>
-                                  Success(), //Change to valid path
+                                  PreApprovedOfferPL(), //Change to valid path
                             ),
                           );
                         },
@@ -293,7 +293,7 @@ class _SelectProductState extends State<SelectProduct> {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (context) =>
-                                  Success(), //Change to valid path
+                                  PreApprovedOfferPL(), //Change to valid path
                             ),
                           );
                         },
@@ -340,7 +340,7 @@ class _SelectProductState extends State<SelectProduct> {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (context) =>
-                                  PreApprovedOffer(), //Change to valid path
+                                  PreApprovedOfferPL(), //Change to valid path
                             ),
                           );
                         },

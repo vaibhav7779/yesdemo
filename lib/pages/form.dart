@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:sar/pages/PL/kyc.dart';
 // import 'package:flutter_breadcrumb/flutter_breadcrumb.dart';
 // import 'package:sar/pages/add_bank.dart';
 // import 'package:sar/pages/employment.dart';
 // import 'package:step_progress_indicator/step_progress_indicator.dart';
 //import 'package:validation/validation.dart';
 
-import 'common/kyc.dart';
 import 'form2.dart';
 
 bool isChecked = false;
@@ -188,7 +188,7 @@ class _BasicInformationState extends State<BasicInformation> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => KYC(),
+                              builder: (context) => KYC_PL(),
                             ),
                           );
                         }

@@ -1,7 +1,6 @@
 // ignore_for_file: unused_import
 
 import 'package:flutter/material.dart';
-import 'package:sar/pages/common/adharConfirmation.dart';
 
 enum ProductType { Gold, Silver, Dimond, Blank }
 
@@ -222,6 +221,7 @@ class _KYCcompletedState extends State<KYCcompleted> {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
+                      
                       Navigator.push(
                         context,
                         MaterialPageRoute(

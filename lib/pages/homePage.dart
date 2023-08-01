@@ -119,7 +119,9 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                     Text(
                                       "Customer",
-                                      style: TextStyle(fontSize: 12),
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w600),
                                     )
                                   ],
                                 ),
@@ -150,7 +152,9 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                     Text(
                                       "Bank Representative",
-                                      style: TextStyle(fontSize: 12),
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w600),
                                     )
                                   ],
                                 ),

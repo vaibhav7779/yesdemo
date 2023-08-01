@@ -18,9 +18,9 @@ class BasicForm extends StatefulWidget {
 class _BasicFormState extends State<BasicForm> {
   bool? check1 = false;
   bool? check2 = false;
+  String? consent;
   @override
   Widget build(BuildContext context) {
-    var consent;
     return Scaffold(
       appBar: AppBar(
         title: const Text("Home Loan"),

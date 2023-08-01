@@ -93,11 +93,11 @@ class _MyAppState extends State<MyApp> {
         // ),
 
 // checkbox theme
-        unselectedWidgetColor: const Color.fromRGBO(225, 31, 42, 1),
+        unselectedWidgetColor: const Color(0xff022DDB),
         checkboxTheme: CheckboxThemeData(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
           fillColor: MaterialStateColor.resolveWith(
-            (states) => const Color.fromRGBO(225, 31, 42, 1),
+            (states) => const Color(0xff022DDB),
           ),
         ),
 

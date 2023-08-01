@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sar/pages/common/kyc.dart';
 
+import '../form2.dart';
+
 enum ProductType { Gold, Silver, Dimond, Blank }
 
 class CustomerConfirmation extends StatefulWidget {
@@ -160,7 +162,7 @@ class _CustomerConfirmationState extends State<CustomerConfirmation> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => KYC(),
+                          builder: (context) => BasicForm(),
                         ),
                       );
                     },

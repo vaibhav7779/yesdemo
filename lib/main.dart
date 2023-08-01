@@ -2,7 +2,12 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:sar/pages/AddressConfirmation.dart';
+import 'package:sar/pages/KYCcompleted.dart';
+import 'package:sar/pages/Savings_account.dart';
+import 'package:sar/pages/common/kyc.dart';
 import 'package:sar/pages/common/preApproved.dart';
+import 'package:sar/pages/common/success.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -56,7 +61,7 @@ class _MyAppState extends State<MyApp> {
       //     return const HomePage();
       //   },
       // ),
-      home: PreApprovedOffer(),
+      home: const AddressConfirmation(),
       // home: BasicInformation(),
       theme: ThemeData(
         // AppBar theme

@@ -1,24 +1,25 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: unused_import
 
-import 'package:sar/pages/common/videoKyc.dart';
+import 'package:flutter/material.dart';
+import 'package:sar/pages/common/adharConfirmation.dart';
 
 enum ProductType { Gold, Silver, Dimond, Blank }
 
-class KYC extends StatefulWidget {
-  const KYC({super.key});
+class KYCcompleted extends StatefulWidget {
+  const KYCcompleted({super.key});
 
   @override
-  State<KYC> createState() => _KYCState();
+  State<KYCcompleted> createState() => _KYCcompletedState();
 }
 
-class _KYCState extends State<KYC> {
+class _KYCcompletedState extends State<KYCcompleted> {
   ProductType? _productType;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Personal Loan"),
+        title: const Text("KYC Module"),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),
@@ -38,19 +39,57 @@ class _KYCState extends State<KYC> {
               const SizedBox(
                 height: 20,
               ),
-              const Text("Progress bar"),
               const SizedBox(
                 height: 40,
               ),
               const Text(
-                'Complete KYC',
+                'Hi Sakshi,',
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 22,
+                ),
+              ),
+              const SizedBox(height: 12),
+              Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                elevation: 5,
+                child: Padding(
+                  padding: const EdgeInsets.all(12),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        child: Image.asset('assets/fingerprint.jpg'),
+                      ),
+                      const SizedBox(
+                        height: 16,
+                      ),
+                      const Text(
+                        'Sorry!',
+                        style: TextStyle(
+                          color: Color(0xff0025BA),
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      const Text('We could not fetch your details.'),
+                      const Text(' Please choose another KYC module'),
+                    ],
+                  ),
                 ),
               ),
               const SizedBox(
                 height: 16,
               ),
+              const Text(
+                'Complete KYC',
+                style: TextStyle(
+                  fontSize: 22,
+                ),
+              ),
+              const SizedBox(height: 12),
               Card(
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15.0),
@@ -75,12 +114,12 @@ class _KYCState extends State<KYC> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'Video KYC ',
+                                    'Physical KYC documents ',
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold),
                                   ),
-                                  const Padding(
+                                  Padding(
                                     padding: EdgeInsets.only(left: 60.0),
                                     child: Align(
                                       alignment: Alignment.topLeft,
@@ -107,10 +146,10 @@ class _KYCState extends State<KYC> {
                           ),
                         ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 50.0),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 50.0),
                         child: Text(
-                          'Fast and paperless KYC verification',
+                          'We will need your signed physical proof of address and proof of identity documents',
                           style: TextStyle(
                               fontSize: 12, fontWeight: FontWeight.w400),
                         ),
@@ -140,27 +179,24 @@ class _KYCState extends State<KYC> {
                                   borderRadius: BorderRadius.circular(5.0)),
                               value: ProductType.Silver,
                               groupValue: _productType,
-                              title: const Column(
+                              title: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    'Biometric',
+                                  const Text(
+                                    'Video KYC',
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 12,
                                   ),
-                                  Text(
-                                    'We will collect your biometric details for paperless KYC',
-                                    style: TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w400),
+                                  const Text(
+                                    'We will need your Aadhaar authentication followed by Video KYC',
                                   ),
-                                  SizedBox(
-                                    width: 115,
-                                  )
+                                  const SizedBox(
+                                    height: 12,
+                                  ),
                                 ],
                               ),
                               dense: true,
@@ -177,7 +213,7 @@ class _KYCState extends State<KYC> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Align(
@@ -189,11 +225,11 @@ class _KYCState extends State<KYC> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => VideoKYC(),
+                          builder: (context) => KYCcompleted(),
                         ),
                       );
                     },
-                    child: const Text("Proceed"),
+                    child: const Text("Submit"),
                   ),
                 ),
               )

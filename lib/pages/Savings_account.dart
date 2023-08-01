@@ -1,24 +1,22 @@
 import 'package:flutter/material.dart';
 
-import 'package:sar/pages/common/videoKyc.dart';
-
 enum ProductType { Gold, Silver, Dimond, Blank }
 
-class KYC extends StatefulWidget {
-  const KYC({super.key});
+class SavingsAccount extends StatefulWidget {
+  const SavingsAccount({super.key});
 
   @override
-  State<KYC> createState() => _KYCState();
+  State<SavingsAccount> createState() => _SavingsAccountState();
 }
 
-class _KYCState extends State<KYC> {
+class _SavingsAccountState extends State<SavingsAccount> {
   ProductType? _productType;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Personal Loan"),
+        title: const Text("Savings Account"),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),
@@ -38,14 +36,17 @@ class _KYCState extends State<KYC> {
               const SizedBox(
                 height: 20,
               ),
+              const Text(
+                  'You are being assisted by our bank representative Sakshi',
+                  style: TextStyle(fontSize: 18)),
               const Text("Progress bar"),
               const SizedBox(
                 height: 40,
               ),
               const Text(
-                'Complete KYC',
+                'Choose an account type',
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 22,
                 ),
               ),
               const SizedBox(
@@ -75,21 +76,21 @@ class _KYCState extends State<KYC> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'Video KYC ',
+                                    'Savings Account Pro Plus ',
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold),
                                   ),
-                                  const Padding(
+                                  Padding(
                                     padding: EdgeInsets.only(left: 60.0),
                                     child: Align(
                                       alignment: Alignment.topLeft,
-                                      child: Chip(
-                                        backgroundColor: Color(0xFFB81C22),
-                                        labelStyle:
-                                            TextStyle(color: Colors.white),
-                                        label: Text('Recommended'),
-                                      ),
+                                      // child: Chip(
+                                      // backgroundColor: Color(0xFFB81C22),
+                                      //labelStyle:
+                                      //  TextStyle(color: Colors.white),
+                                      //label: Text('Recommended'),
+                                      // ),
                                     ),
                                   ),
                                   SizedBox(
@@ -107,10 +108,10 @@ class _KYCState extends State<KYC> {
                           ),
                         ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 50.0),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 50.0),
                         child: Text(
-                          'Fast and paperless KYC verification',
+                          'Open regular savings account at your convenience with additional features and services',
                           style: TextStyle(
                               fontSize: 12, fontWeight: FontWeight.w400),
                         ),
@@ -140,27 +141,37 @@ class _KYCState extends State<KYC> {
                                   borderRadius: BorderRadius.circular(5.0)),
                               value: ProductType.Silver,
                               groupValue: _productType,
-                              title: const Column(
+                              title: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    'Biometric',
+                                  const Text(
+                                    'Savings Account Pro',
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 12,
                                   ),
-                                  Text(
-                                    'We will collect your biometric details for paperless KYC',
-                                    style: TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w400),
+                                  const Text(
+                                    'Open regular savings account at your convenience with a minimal average balance requirement',
+                                  ),
+                                  const SizedBox(
+                                    width: 115,
+                                    height: 12,
                                   ),
                                   SizedBox(
-                                    width: 115,
-                                  )
+                                    child: Image.asset('assets/card.jpg'),
+                                  ),
+                                  const SizedBox(
+                                    height: 12,
+                                  ),
+                                  const Text(
+                                    '1.Fast,easy and paperless way for opening account',
+                                  ),
+                                  const SizedBox(height: 12),
+                                  const Text(
+                                      '2. Complementry Virtual Debit card'),
                                 ],
                               ),
                               dense: true,
@@ -177,7 +188,7 @@ class _KYCState extends State<KYC> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Align(
@@ -189,7 +200,7 @@ class _KYCState extends State<KYC> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => VideoKYC(),
+                          builder: (context) => SavingsAccount(),
                         ),
                       );
                     },

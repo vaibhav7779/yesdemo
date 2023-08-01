@@ -1,28 +1,22 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart' as intl;
 import 'package:sar/global.dart' as globals;
-import 'package:sar/pages/common/adharConfirmation.dart';
-import 'package:step_progress_indicator/step_progress_indicator.dart';
 
-class PreApprovedOffer extends StatefulWidget {
-  const PreApprovedOffer({super.key});
+class SuccessHL extends StatefulWidget {
+  const SuccessHL({super.key});
 
   @override
-  State<PreApprovedOffer> createState() => _PreApprovedOfferState();
+  State<SuccessHL> createState() => _SuccessHLState();
 }
 
-class _PreApprovedOfferState extends State<PreApprovedOffer> {
-  var format = intl.NumberFormat.currency(
-    locale: 'en_IN',
-    decimalDigits: 0, // change it to get decimal places
-    symbol: '₹ ',
-  );
-
+class _SuccessHLState extends State<SuccessHL> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Personal Loan"),
+        title: const Text("Home Loan"),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),
@@ -41,22 +35,11 @@ class _PreApprovedOfferState extends State<PreApprovedOffer> {
               const SizedBox(
                 height: 20,
               ),
-              const Text("Hello Sakshi, you are just a few steps away"),
+              const Text("Hi Sakshi,"),
               const SizedBox(
                 height: 20,
               ),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Align(alignment: Alignment.topRight, child: Text("2/4"))
-                ],
-              ),
-              const SizedBox(height: 10),
-              const StepProgressIndicator(
-                totalSteps: 4,
-                currentStep: 2,
-                selectedColor: Color(0xff022DDB),
-              ),
+              const Text("Progress bar"),
               const SizedBox(
                 height: 20,
               ),
@@ -70,10 +53,10 @@ class _PreApprovedOfferState extends State<PreApprovedOffer> {
                   child: Column(
                     children: [
                       SizedBox(
-                        child: Image.asset('assets/success.gif'),
+                        child: Image.asset('assets/rocket.gif'),
                       ),
                       const Text(
-                        'Congratulations',
+                        'Thank you for your details',
                         style: TextStyle(
                           color: Color(0xff0025BA),
                           fontSize: 16,
@@ -82,24 +65,10 @@ class _PreApprovedOfferState extends State<PreApprovedOffer> {
                       ),
                       const SizedBox(height: 10),
                       const Text(
-                        'You have been approved for a personal loan of',
+                        'KYC completion is subject to further checks. We will send the update on your registered mobile number ending with 8767',
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                      const SizedBox(height: 10),
-                      ShaderMask(
-                        shaderCallback: (bounds) => const LinearGradient(
-                          colors: [Color(0xff022DDB), Color(0xff0026Bf)],
-                        ).createShader(bounds),
-                        child: Text(
-                          format.format(globals.amount),
-                          style: TextStyle(
-                            fontSize: 34.0,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w700,
-                          ),
                         ),
                       ),
                       const SizedBox(height: 10),
@@ -114,14 +83,14 @@ class _PreApprovedOfferState extends State<PreApprovedOffer> {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => CustomerConfirmation(),
-                        ),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => SuccessHL(),
+                      //   ),
+                      // );
                     },
-                    child: const Text("Proceed"),
+                    child: const Text("Submit"),
                   ),
                 ),
               )

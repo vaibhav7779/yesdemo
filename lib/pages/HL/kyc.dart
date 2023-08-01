@@ -1,24 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:sar/pages/KYCcompleted.dart';
-import 'package:sar/pages/common/videoKyc.dart';
+import 'package:sar/pages/HL/vKYC.dart';
 
 enum ProductType { Gold, Silver, Dimond, Blank }
 
-class KYC extends StatefulWidget {
-  const KYC({super.key});
+class KYC_HL extends StatefulWidget {
+  const KYC_HL({super.key});
 
   @override
-  State<KYC> createState() => _KYCState();
+  State<KYC_HL> createState() => _KYC_HLState();
 }
 
-class _KYCState extends State<KYC> {
+class _KYC_HLState extends State<KYC_HL> {
   ProductType? _productType;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Personal Loan"),
+        title: const Text("Home Loan"),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),
@@ -178,7 +177,7 @@ class _KYCState extends State<KYC> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => KYCcompleted(),
+                          builder: (context) => VideoKYC_HL(),
                         ),
                       );
                     },

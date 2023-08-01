@@ -1,25 +1,24 @@
-// ignore_for_file: unused_import
-
 import 'package:flutter/material.dart';
-import 'package:sar/pages/common/adharConfirmation.dart';
+import 'package:sar/pages/SA/AddressConfirmation.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 enum ProductType { Gold, Silver, Dimond, Blank }
 
-class KYCcompleted extends StatefulWidget {
-  const KYCcompleted({super.key});
+class SavingsAccount extends StatefulWidget {
+  const SavingsAccount({super.key});
 
   @override
-  State<KYCcompleted> createState() => _KYCcompletedState();
+  State<SavingsAccount> createState() => _SavingsAccountState();
 }
 
-class _KYCcompletedState extends State<KYCcompleted> {
+class _SavingsAccountState extends State<SavingsAccount> {
   ProductType? _productType;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("KYC Module"),
+        title: const Text("Savings Account"),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),
@@ -39,57 +38,33 @@ class _KYCcompletedState extends State<KYCcompleted> {
               const SizedBox(
                 height: 20,
               ),
+              const Text(
+                  'You are being assisted by our bank representative Sakshi',
+                  style: TextStyle(fontSize: 18)),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Align(alignment: Alignment.topRight, child: Text("2/4"))
+                ],
+              ),
+              const SizedBox(height: 10),
+              const StepProgressIndicator(
+                totalSteps: 4,
+                currentStep: 2,
+                selectedColor: Color(0xff022DDB),
+              ),
               const SizedBox(
                 height: 40,
               ),
               const Text(
-                'Hi Sakshi,',
+                'Choose an account type',
                 style: TextStyle(
                   fontSize: 22,
-                ),
-              ),
-              const SizedBox(height: 12),
-              Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15.0),
-                ),
-                elevation: 5,
-                child: Padding(
-                  padding: const EdgeInsets.all(12),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SizedBox(
-                        child: Image.asset('assets/fingerprint.jpg'),
-                      ),
-                      const SizedBox(
-                        height: 16,
-                      ),
-                      const Text(
-                        'Sorry!',
-                        style: TextStyle(
-                          color: Color(0xff0025BA),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                      const Text('We could not fetch your details.'),
-                      const Text(' Please choose another KYC module'),
-                    ],
-                  ),
                 ),
               ),
               const SizedBox(
                 height: 16,
               ),
-              const Text(
-                'Complete KYC',
-                style: TextStyle(
-                  fontSize: 22,
-                ),
-              ),
-              const SizedBox(height: 12),
               Card(
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15.0),
@@ -114,7 +89,7 @@ class _KYCcompletedState extends State<KYCcompleted> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'Physical KYC documents ',
+                                    'Savings Account Pro Plus ',
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold),
@@ -123,12 +98,12 @@ class _KYCcompletedState extends State<KYCcompleted> {
                                     padding: EdgeInsets.only(left: 60.0),
                                     child: Align(
                                       alignment: Alignment.topLeft,
-                                      child: Chip(
-                                        backgroundColor: Color(0xFFB81C22),
-                                        labelStyle:
-                                            TextStyle(color: Colors.white),
-                                        label: Text('Recommended'),
-                                      ),
+                                      // child: Chip(
+                                      // backgroundColor: Color(0xFFB81C22),
+                                      //labelStyle:
+                                      //  TextStyle(color: Colors.white),
+                                      //label: Text('Recommended'),
+                                      // ),
                                     ),
                                   ),
                                   SizedBox(
@@ -149,7 +124,7 @@ class _KYCcompletedState extends State<KYCcompleted> {
                       const Padding(
                         padding: EdgeInsets.only(left: 50.0),
                         child: Text(
-                          'We will need your signed physical proof of address and proof of identity documents',
+                          'Open regular savings account at your convenience with additional features and services',
                           style: TextStyle(
                               fontSize: 12, fontWeight: FontWeight.w400),
                         ),
@@ -183,7 +158,7 @@ class _KYCcompletedState extends State<KYCcompleted> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   const Text(
-                                    'Video KYC',
+                                    'Savings Account Pro',
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold),
@@ -192,11 +167,24 @@ class _KYCcompletedState extends State<KYCcompleted> {
                                     height: 12,
                                   ),
                                   const Text(
-                                    'We will need your Aadhaar authentication followed by Video KYC',
+                                    'Open regular savings account at your convenience with a minimal average balance requirement',
+                                  ),
+                                  const SizedBox(
+                                    width: 115,
+                                    height: 12,
+                                  ),
+                                  SizedBox(
+                                    child: Image.asset('assets/card.jpg'),
                                   ),
                                   const SizedBox(
                                     height: 12,
                                   ),
+                                  const Text(
+                                    '1.Fast,easy and paperless way for opening account',
+                                  ),
+                                  const SizedBox(height: 12),
+                                  const Text(
+                                      '2. Complementry Virtual Debit card'),
                                 ],
                               ),
                               dense: true,
@@ -225,11 +213,11 @@ class _KYCcompletedState extends State<KYCcompleted> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => KYCcompleted(),
+                          builder: (context) => AddressConfirmation(),
                         ),
                       );
                     },
-                    child: const Text("Submit"),
+                    child: const Text("Proceed"),
                   ),
                 ),
               )

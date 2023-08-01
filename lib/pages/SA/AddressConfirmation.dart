@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sar/pages/common/kyc.dart';
+import 'package:sar/pages/SA/kyc.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 enum ProductType { Gold, Silver, Dimond, Blank }
@@ -79,6 +79,8 @@ class _AddressConfirmationState extends State<AddressConfirmation> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      Text(
+                          "Is your current address same as that of Aadhaar address?"),
                       Row(
                         children: [
                           Expanded(
@@ -132,7 +134,7 @@ class _AddressConfirmationState extends State<AddressConfirmation> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => KYC(),
+                          builder: (context) => KYC_SA(),
                         ),
                       );
                     },

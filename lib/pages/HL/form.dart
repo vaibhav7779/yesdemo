@@ -1,24 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:step_progress_indicator/step_progress_indicator.dart';
+import 'package:sar/pages/HL/kyc.dart';
 // import 'package:flutter_breadcrumb/flutter_breadcrumb.dart';
 // import 'package:sar/pages/add_bank.dart';
 // import 'package:sar/pages/employment.dart';
-// import 'package:step_progress_indicator/step_progress_indicator.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 //import 'package:validation/validation.dart';
 
-import 'common/kyc.dart';
 import 'form2.dart';
 
 bool isChecked = false;
 
-class BasicInformation extends StatefulWidget {
-  const BasicInformation({super.key});
+class CurrentAddress extends StatefulWidget {
+  const CurrentAddress({super.key});
 
   @override
-  State<BasicInformation> createState() => _BasicInformationState();
+  State<CurrentAddress> createState() => _CurrentAddressState();
 }
 
-class _BasicInformationState extends State<BasicInformation> {
+class _CurrentAddressState extends State<CurrentAddress> {
   bool? check1 = false;
   bool? check2 = false;
   bool _value = false;
@@ -174,7 +173,7 @@ class _BasicInformationState extends State<BasicInformation> {
                           ),
                           const SizedBox(width: 20),
                           const Text(
-                            "I accept andagree all details furnished by me are correct",
+                            "I accept and agree all details furnished by me are correct",
                             style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w400,
@@ -195,7 +194,7 @@ class _BasicInformationState extends State<BasicInformation> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => KYC(),
+                              builder: (context) => KYC_HL(),
                             ),
                           );
                         }

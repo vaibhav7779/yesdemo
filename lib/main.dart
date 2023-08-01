@@ -2,35 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:sar/pages/approval.dart';
-import 'package:sar/pages/basicInfo.dart';
-import 'package:sar/pages/emailLogin.dart';
-// import 'package:sar/pages/addressConfirm.dart';
-// import 'package:sar/pages/basicInfo.dart';
-// import 'package:sar/pages/e-nach.dart';
-// import 'package:sar/pages/employment.dart';
-// import 'package:sar/pages/homePage.dart';
-// import 'package:sar/pages/income_verification.dart';
-// import 'package:sar/pages/loan-disbursed.dart';
-// import 'package:sar/pages/loan-disbursed.dart';
-// import 'package:sar/pages/document-sign.dart';
-// import 'package:sar/pages/login.dart';
-// import 'package:sar/pages/basicInfo.dart';
-// import 'package:sar/pages/loanSummary.dart';
-import 'package:sar/pages/homePage.dart';
-import 'package:sar/pages/smsLogin.dart';
-import 'package:sar/pages/signUp.dart';
-// import 'package:sar/pages/testing/dummylogin.dart';
-// import 'package:sar/pages/thirdparty.dart';
-// import 'package:sar/pages/thirdparty2.dart';
-// import 'package:sar/pages/login.dart';
-// import 'package:sar/palette.dart';
-// import 'package:sar/pages/addressConfirm.dart';
-// import 'package:sar/pages/login.dart';
-// import 'package:sar/pages/otp.dart';
-// import 'package:sar/pages/otp.dart';
-// import 'package:sar/utils/routes.dart';
-// import 'package:sar/pages/thirdparty2.dart';
+import 'package:sar/pages/common/preApproved.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -59,40 +31,39 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
 
-      home: StreamBuilder(
-        stream: FirebaseAuth.instance.authStateChanges(),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.active) {
-            // Checking if the snapshot has any data or not
-            if (snapshot.hasData) {
-              // if snapshot has data which means user is logged in then we check the width of screen and accordingly display the screen layout
-              return const BasicInformation();
-            } else if (snapshot.hasError) {
-              return Center(
-                child: Text('${snapshot.error}'),
-              );
-            }
-          }
+      // home: StreamBuilder(
+      //   stream: FirebaseAuth.instance.authStateChanges(),
+      //   builder: (context, snapshot) {
+      //     if (snapshot.connectionState == ConnectionState.active) {
+      //       // Checking if the snapshot has any data or not
+      //       if (snapshot.hasData) {
+      //         // if snapshot has data which means user is logged in then we check the width of screen and accordingly display the screen layout
+      //         return const BasicInformation();
+      //       } else if (snapshot.hasError) {
+      //         return Center(
+      //           child: Text('${snapshot.error}'),
+      //         );
+      //       }
+      //     }
 
-          // means connection to future hasnt been made yet
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(
-              child: CircularProgressIndicator(color: Colors.red),
-            );
-          }
+      //     // means connection to future hasnt been made yet
+      //     if (snapshot.connectionState == ConnectionState.waiting) {
+      //       return const Center(
+      //         child: CircularProgressIndicator(color: Colors.red),
+      //       );
+      //     }
 
-          return const HomePage();
-        },
-      ),
-      // home: HomePage(),
-      // home: TestingLoginScreen(),
+      //     return const HomePage();
+      //   },
+      // ),
+      home: PreApprovedOffer(),
+      // home: BasicInformation(),
       theme: ThemeData(
         // AppBar theme
         // primarySwatch: buildMaterialColor(Color(0xFFF7B61A)),
         primaryColor: Color(0xffF7B61A),
         appBarTheme: const AppBarTheme(
-            backgroundColor: Color.fromRGBO(247, 182, 26, 1),
-            centerTitle: false),
+            backgroundColor: Color(0xff022DDB), centerTitle: false),
 
 // Elevated Button
         elevatedButtonTheme: ElevatedButtonThemeData(
@@ -151,7 +122,7 @@ class _MyAppState extends State<MyApp> {
         ),
         radioTheme: RadioThemeData(
           fillColor:
-              MaterialStateColor.resolveWith((states) => Color(0xFFE11F2A)),
+              MaterialStateColor.resolveWith((states) => Color(0xff022DDB)),
         ), //
 // cursor color
         textSelectionTheme: const TextSelectionThemeData(

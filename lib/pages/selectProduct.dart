@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:sar/pages/AddressConfirmation.dart';
+import 'package:sar/pages/Savings_account.dart';
+import 'package:sar/pages/common/preApproved.dart';
 import 'package:sar/pages/common/success.dart';
 //import 'package:sar/pages/login.dart';
 
@@ -98,7 +101,7 @@ class _SelectProductState extends State<SelectProduct> {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (context) =>
-                                  Success(), //Change to valid path
+                                  SavingsAccount(), //Change to valid path
                             ),
                           );
                         },
@@ -145,7 +148,7 @@ class _SelectProductState extends State<SelectProduct> {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (context) =>
-                                  Success(), //Change to valid path
+                                  PreApprovedOffer(), //Change to valid path
                             ),
                           );
                         },
@@ -194,7 +197,7 @@ class _SelectProductState extends State<SelectProduct> {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (context) =>
-                                  Success(), //Change to valid path
+                                  PreApprovedOffer(), //Change to valid path
                             ),
                           );
                         },
@@ -337,7 +340,7 @@ class _SelectProductState extends State<SelectProduct> {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (context) =>
-                                  Success(), //Change to valid path
+                                  PreApprovedOffer(), //Change to valid path
                             ),
                           );
                         },

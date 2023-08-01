@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sar/pages/common/kyc.dart';
 
 enum ProductType { Gold, Silver, Dimond, Blank }
 
@@ -119,7 +120,7 @@ class _AddressConfirmationState extends State<AddressConfirmation> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => AddressConfirmation(),
+                          builder: (context) => KYC(),
                         ),
                       );
                     },

@@ -78,7 +78,7 @@ class _KYC_HLState extends State<KYC_HL> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Video KYC_HL',
+                                'Video KYC',
                                 style: TextStyle(
                                     fontSize: 14, fontWeight: FontWeight.bold),
                               ),
@@ -88,7 +88,7 @@ class _KYC_HLState extends State<KYC_HL> {
                               Padding(
                                 padding: EdgeInsets.only(bottom: 12.0),
                                 child: Text(
-                                  'Fast and paperless KYC_HL verification',
+                                  'Fast and paperless KYC verification',
                                   style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.w400),
@@ -141,7 +141,7 @@ class _KYC_HLState extends State<KYC_HL> {
                                     height: 12,
                                   ),
                                   Text(
-                                    'We will collect your biometric details for paperless KYC_HL',
+                                    'We will collect your biometric details for paperless KYC',
                                     style: TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w400),

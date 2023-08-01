@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sar/pages/PL/kyc.dart';
+import 'package:sar/pages/HL/kyc.dart';
 // import 'package:flutter_breadcrumb/flutter_breadcrumb.dart';
 // import 'package:sar/pages/add_bank.dart';
 // import 'package:sar/pages/employment.dart';
@@ -167,7 +167,7 @@ class _CurrentAddressState extends State<CurrentAddress> {
                           ),
                           const SizedBox(width: 20),
                           const Text(
-                            "I accept andagree all details furnished by me are correct",
+                            "I accept and agree all details furnished by me are correct",
                             style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w400,
@@ -188,7 +188,7 @@ class _CurrentAddressState extends State<CurrentAddress> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => KYC_PL(),
+                              builder: (context) => KYC_HL(),
                             ),
                           );
                         }

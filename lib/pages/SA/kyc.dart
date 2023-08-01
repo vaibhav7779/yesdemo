@@ -78,7 +78,7 @@ class _KYC_SAState extends State<KYC_SA> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Video KYC_SA',
+                                'Biometric',
                                 style: TextStyle(
                                     fontSize: 14, fontWeight: FontWeight.bold),
                               ),
@@ -132,7 +132,7 @@ class _KYC_SAState extends State<KYC_SA> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'Biometric',
+                                    'Physical KYC',
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold),

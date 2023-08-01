@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 // import 'package:flutter_breadcrumb/flutter_breadcrumb.dart';
 // import 'package:sar/pages/add_bank.dart';
 // import 'package:sar/pages/employment.dart';
@@ -68,12 +69,18 @@ class _BasicInformationState extends State<BasicInformation> {
 
               const SizedBox(height: 20),
 
-              // const SizedBox(height: 10),
-              // //const StepProgressIndicator(
-              //   totalSteps: 11,
-              //   currentStep: 2,
-              //   selectedColor: Color(0xFF45C00B),
-              // ),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Align(alignment: Alignment.topRight, child: Text("3/4"))
+                ],
+              ),
+              const SizedBox(height: 10),
+              const StepProgressIndicator(
+                totalSteps: 4,
+                currentStep: 3,
+                selectedColor: Color(0xff022DDB),
+              ),
               const SizedBox(height: 24),
               const Text(
                 "Add Current address",

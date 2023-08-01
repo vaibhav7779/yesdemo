@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sar/pages/common/kyc.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 enum ProductType { Gold, Silver, Dimond, Blank }
 
@@ -43,7 +44,18 @@ class _AddressConfirmationState extends State<AddressConfirmation> {
               const SizedBox(
                 height: 20,
               ),
-              const Text("Progress bar"),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Align(alignment: Alignment.topRight, child: Text("3/4"))
+                ],
+              ),
+              const SizedBox(height: 10),
+              const StepProgressIndicator(
+                totalSteps: 4,
+                currentStep: 3,
+                selectedColor: Color(0xff022DDB),
+              ),
               const SizedBox(
                 height: 40,
               ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 import 'form.dart';
 // import 'package:flutter_breadcrumb/flutter_breadcrumb.dart';
@@ -66,13 +67,19 @@ class _BasicFormState extends State<BasicForm> {
               //   ],
 
               const SizedBox(height: 20),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Align(alignment: Alignment.topRight, child: Text("3/4"))
+                ],
+              ),
+              const SizedBox(height: 10),
+              const StepProgressIndicator(
+                totalSteps: 4,
+                currentStep: 3,
+                selectedColor: Color(0xff022DDB),
+              ),
 
-              // const SizedBox(height: 10),
-              // //const StepProgressIndicator(
-              //   totalSteps: 11,
-              //   currentStep: 2,
-              //   selectedColor: Color(0xFF45C00B),
-              // ),
               const SizedBox(height: 24),
               const Text(
                 "Fetching details from Adhaar",

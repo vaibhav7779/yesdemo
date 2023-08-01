@@ -21,6 +21,7 @@ class BasicInformation extends StatefulWidget {
 class _BasicInformationState extends State<BasicInformation> {
   bool? check1 = false;
   bool? check2 = false;
+  bool _value = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -164,10 +165,10 @@ class _BasicInformationState extends State<BasicInformation> {
                       Row(
                         children: [
                           Checkbox(
-                            value: check1,
-                            onChanged: (bool? value) {
+                            value: _value,
+                            onChanged: (value) {
                               setState(() {
-                                check1 = value;
+                                _value = value!;
                               });
                             },
                           ),
@@ -185,20 +186,21 @@ class _BasicInformationState extends State<BasicInformation> {
                   ),
                 ),
               ),
-
               const SizedBox(height: 20),
               Container(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => KYC(),
-                      ),
-                    );
-                  },
-                  child: const Text("Proceed"),
+                  onPressed: _value == true
+                      ? () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => KYC(),
+                            ),
+                          );
+                        }
+                      : null,
+                  child: const Text('continue'),
                 ),
               ),
             ],

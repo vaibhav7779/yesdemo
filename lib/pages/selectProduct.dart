@@ -119,8 +119,8 @@ class _SelectProductState extends State<SelectProduct> {
                                       horizontal: 14, vertical: 14),
                                   child: Column(
                                     children: [
-                                      Icon(
-                                        Icons.account_circle_outlined,
+                                      ImageIcon(
+                                        AssetImage("assets/savings.png"),
                                         size: 30,
                                       ),
                                       SizedBox(
@@ -166,7 +166,10 @@ class _SelectProductState extends State<SelectProduct> {
                                       horizontal: 14, vertical: 14),
                                   child: Column(
                                     children: [
-                                      Icon(Icons.support_agent, size: 30),
+                                      ImageIcon(
+                                        AssetImage("assets/personal.png"),
+                                        size: 30,
+                                      ),
                                       SizedBox(
                                         height: 10,
                                       ),
@@ -215,8 +218,8 @@ class _SelectProductState extends State<SelectProduct> {
                                       horizontal: 14, vertical: 14),
                                   child: Column(
                                     children: [
-                                      Icon(
-                                        Icons.account_circle_outlined,
+                                      ImageIcon(
+                                        AssetImage("assets/pay_later.png"),
                                         size: 30,
                                       ),
                                       SizedBox(
@@ -262,7 +265,10 @@ class _SelectProductState extends State<SelectProduct> {
                                       horizontal: 14, vertical: 14),
                                   child: Column(
                                     children: [
-                                      Icon(Icons.support_agent, size: 30),
+                                      ImageIcon(
+                                        AssetImage("assets/cc.png"),
+                                        size: 30,
+                                      ),
                                       SizedBox(
                                         height: 10,
                                       ),
@@ -311,8 +317,8 @@ class _SelectProductState extends State<SelectProduct> {
                                       horizontal: 14, vertical: 14),
                                   child: Column(
                                     children: [
-                                      Icon(
-                                        Icons.account_circle_outlined,
+                                      ImageIcon(
+                                        AssetImage("assets/forex.png"),
                                         size: 30,
                                       ),
                                       SizedBox(
@@ -358,7 +364,10 @@ class _SelectProductState extends State<SelectProduct> {
                                       horizontal: 14, vertical: 14),
                                   child: Column(
                                     children: [
-                                      Icon(Icons.support_agent, size: 30),
+                                      ImageIcon(
+                                        AssetImage("assets/home_loan.png"),
+                                        size: 30,
+                                      ),
                                       SizedBox(
                                         height: 10,
                                       ),

@@ -82,8 +82,7 @@ class _MyAppState extends State<MyApp> {
 
 // textformfield
         textButtonTheme: TextButtonThemeData(
-          style: ElevatedButton.styleFrom(
-              foregroundColor: Color.fromRGBO(255, 31, 41, 1)),
+          style: ElevatedButton.styleFrom(foregroundColor: Color(0xff022DDB)),
         ),
 
 // Text Button

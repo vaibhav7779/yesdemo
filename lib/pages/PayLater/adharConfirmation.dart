@@ -1,26 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:sar/pages/common/kyc.dart';
-import 'package:step_progress_indicator/step_progress_indicator.dart';
+import 'package:sar/pages/PayLater/kyc.dart';
 
-import '../HL/form2.dart';
+// import '../HL/form2.dart';
 
 enum ProductType { Gold, Silver, Dimond, Blank }
 
-class CustomerConfirmation extends StatefulWidget {
-  const CustomerConfirmation({super.key});
+class CustomerConfirmationPayLater extends StatefulWidget {
+  const CustomerConfirmationPayLater({super.key});
 
   @override
-  State<CustomerConfirmation> createState() => _CustomerConfirmationState();
+  State<CustomerConfirmationPayLater> createState() =>
+      _CustomerConfirmationPayLaterState();
 }
 
-class _CustomerConfirmationState extends State<CustomerConfirmation> {
+class _CustomerConfirmationPayLaterState
+    extends State<CustomerConfirmationPayLater> {
   ProductType? _productType;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Personal Loan"),
+        title: const Text("Pay Later"),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),
@@ -40,18 +41,7 @@ class _CustomerConfirmationState extends State<CustomerConfirmation> {
               const SizedBox(
                 height: 20,
               ),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Align(alignment: Alignment.topRight, child: Text("3/4"))
-                ],
-              ),
-              const SizedBox(height: 10),
-              const StepProgressIndicator(
-                totalSteps: 4,
-                currentStep: 3,
-                selectedColor: Color(0xff022DDB),
-              ),
+              const Text("Progress bar"),
               const SizedBox(
                 height: 40,
               ),
@@ -171,12 +161,12 @@ class _CustomerConfirmationState extends State<CustomerConfirmation> {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => BasicForm(),
-                      //   ),
-                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => KYC_PayLater(),
+                        ),
+                      );
                     },
                     child: const Text("Proceed"),
                   ),

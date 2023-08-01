@@ -24,11 +24,40 @@ class _VideoKYCState extends State<VideoKYC> {
           ],
         ),
         body: SingleChildScrollView(
-          child: Column(children: [
-            Padding(
-              padding: const EdgeInsets.all(1.0),
-              child: GestureDetector(
-                onTap: () {
+      child: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(children: [
+          Padding(
+            padding: const EdgeInsets.all(1.0),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Success(),
+                  ),
+                );
+              },
+              child: Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: Image.asset(
+                  "assets/vkyc.png",
+                  fit: BoxFit.cover,
+                  width: 400,
+                  height: 510,
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -36,38 +65,12 @@ class _VideoKYCState extends State<VideoKYC> {
                     ),
                   );
                 },
-                child: Padding(
-                  padding: const EdgeInsets.all(18.0),
-                  child: Image.asset(
-                    "assets/vkyc.png",
-                    fit: BoxFit.cover,
-                    width: 400,
-                    height: 570,
-                  ),
-                ),
+                child: const Text("Proceed"),
               ),
             ),
-            const SizedBox(
-              height: 10,
-            ),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Success(),
-                      ),
-                    );
-                  },
-                  child: const Text("Proceed"),
-                ),
-              ),
-            )
-          ]),
-        ));
+          )
+        ]),
+      ),
+    ));
   }
 }

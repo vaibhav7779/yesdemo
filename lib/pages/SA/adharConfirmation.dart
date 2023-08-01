@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:sar/pages/PL/kyc.dart';
+import 'package:sar/pages/SA/kyc.dart';
 
 // import '../HL/form2.dart';
 
 enum ProductType { Gold, Silver, Dimond, Blank }
 
-class CustomerConfirmationPL extends StatefulWidget {
-  const CustomerConfirmationPL({super.key});
+class CustomerConfirmationSA extends StatefulWidget {
+  const CustomerConfirmationSA({super.key});
 
   @override
-  State<CustomerConfirmationPL> createState() => _CustomerConfirmationPLState();
+  State<CustomerConfirmationSA> createState() => _CustomerConfirmationSAState();
 }
 
-class _CustomerConfirmationPLState extends State<CustomerConfirmationPL> {
+class _CustomerConfirmationSAState extends State<CustomerConfirmationSA> {
   ProductType? _productType;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Personal Loan"),
+        title: const Text("Savings Account"),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),
@@ -162,7 +162,7 @@ class _CustomerConfirmationPLState extends State<CustomerConfirmationPL> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => KYC_PL(),
+                          builder: (context) => KYC_SA(),
                         ),
                       );
                     },

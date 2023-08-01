@@ -10,14 +10,14 @@ import 'form2.dart';
 
 bool isChecked = false;
 
-class BasicInformation extends StatefulWidget {
-  const BasicInformation({super.key});
+class CurrentAddress extends StatefulWidget {
+  const CurrentAddress({super.key});
 
   @override
-  State<BasicInformation> createState() => _BasicInformationState();
+  State<CurrentAddress> createState() => _CurrentAddressState();
 }
 
-class _BasicInformationState extends State<BasicInformation> {
+class _CurrentAddressState extends State<CurrentAddress> {
   bool? check1 = false;
   bool? check2 = false;
   bool _value = false;

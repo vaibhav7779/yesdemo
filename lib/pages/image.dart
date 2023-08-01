@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'form2.dart';
+import 'HL/form2.dart';
 
 class aceess extends StatefulWidget {
   const aceess({super.key});
@@ -22,7 +22,7 @@ class _ThirdPartState extends State<aceess> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => BasicForm(),
+                  builder: (context) => PermanentAddress(),
                 ),
               );
             },

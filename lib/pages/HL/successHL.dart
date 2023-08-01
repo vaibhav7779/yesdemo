@@ -4,19 +4,19 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart' as intl;
 import 'package:sar/global.dart' as globals;
 
-class SuccessPL extends StatefulWidget {
-  const SuccessPL({super.key});
+class SuccessHL extends StatefulWidget {
+  const SuccessHL({super.key});
 
   @override
-  State<SuccessPL> createState() => _SuccessPLState();
+  State<SuccessHL> createState() => _SuccessHLState();
 }
 
-class _SuccessPLState extends State<SuccessPL> {
+class _SuccessHLState extends State<SuccessHL> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Personal Loan"),
+        title: const Text("Home Loan"),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),
@@ -86,7 +86,7 @@ class _SuccessPLState extends State<SuccessPL> {
                       // Navigator.push(
                       //   context,
                       //   MaterialPageRoute(
-                      //     builder: (context) => SuccessPL(),
+                      //     builder: (context) => SuccessHL(),
                       //   ),
                       // );
                     },

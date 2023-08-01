@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:sar/pages/PL/vKYC.dart';
+import 'package:sar/pages/HL/vKYC.dart';
 
 enum ProductType { Gold, Silver, Dimond, Blank }
 
-class KYC_PL extends StatefulWidget {
-  const KYC_PL({super.key});
+class KYC_HL extends StatefulWidget {
+  const KYC_HL({super.key});
 
   @override
-  State<KYC_PL> createState() => _KYC_PLState();
+  State<KYC_HL> createState() => _KYC_HLState();
 }
 
-class _KYC_PLState extends State<KYC_PL> {
+class _KYC_HLState extends State<KYC_HL> {
   ProductType? _productType;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Personal Loan"),
+        title: const Text("Home Loan"),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),
@@ -78,7 +78,7 @@ class _KYC_PLState extends State<KYC_PL> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Video KYC_PL',
+                                'Video KYC_HL',
                                 style: TextStyle(
                                     fontSize: 14, fontWeight: FontWeight.bold),
                               ),
@@ -88,7 +88,7 @@ class _KYC_PLState extends State<KYC_PL> {
                               Padding(
                                 padding: EdgeInsets.only(bottom: 12.0),
                                 child: Text(
-                                  'Fast and paperless KYC_PL verification',
+                                  'Fast and paperless KYC_HL verification',
                                   style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.w400),
@@ -141,7 +141,7 @@ class _KYC_PLState extends State<KYC_PL> {
                                     height: 12,
                                   ),
                                   Text(
-                                    'We will collect your biometric details for paperless KYC_PL',
+                                    'We will collect your biometric details for paperless KYC_HL',
                                     style: TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w400),
@@ -177,7 +177,7 @@ class _KYC_PLState extends State<KYC_PL> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => VideoKYC_PL(),
+                          builder: (context) => VideoKYC_HL(),
                         ),
                       );
                     },

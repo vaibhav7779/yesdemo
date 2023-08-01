@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:sar/pages/HL/form.dart';
+import 'package:sar/pages/HL/kyc.dart';
 
-import 'form.dart';
+// import 'form.dart';
 // import 'package:flutter_breadcrumb/flutter_breadcrumb.dart';
 // import 'package:sar/pages/add_bank.dart';
 // import 'package:sar/pages/employment.dart';
@@ -8,14 +10,14 @@ import 'form.dart';
 
 bool isChecked = false;
 
-class BasicForm extends StatefulWidget {
-  const BasicForm({super.key});
+class PermanentAddress extends StatefulWidget {
+  const PermanentAddress({super.key});
 
   @override
-  State<BasicForm> createState() => _BasicFormState();
+  State<PermanentAddress> createState() => _PermanentAddressState();
 }
 
-class _BasicFormState extends State<BasicForm> {
+class _PermanentAddressState extends State<PermanentAddress> {
   bool? check1 = false;
   bool? check2 = false;
   String? consent;
@@ -190,7 +192,7 @@ class _BasicFormState extends State<BasicForm> {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       const Text(
-                          "Is co-applicant the co-owner of the property?"),
+                          "Is your current address same as that of above address?"),
                       Row(
                         children: [
                           Expanded(
@@ -240,7 +242,7 @@ class _BasicFormState extends State<BasicForm> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => BasicInformation(),
+                        builder: (context) => CurrentAddress(),
                       ),
                     );
                   },

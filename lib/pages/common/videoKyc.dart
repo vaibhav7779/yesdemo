@@ -12,6 +12,17 @@ class _VideoKYCState extends State<VideoKYC> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          title: const Text("Personal Loan"),
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+            onPressed: () => Navigator.of(context).pop(),
+          ),
+          actions: const <Widget>[
+            // Icon(Icons.question_mark_rounded),
+            SizedBox(width: 15)
+          ],
+        ),
         body: SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.all(20.0),

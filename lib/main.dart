@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:sar/pages/common/adharConfirmation.dart';
 import 'package:sar/pages/common/preApproved.dart';
 
 void main() async {
@@ -56,7 +57,7 @@ class _MyAppState extends State<MyApp> {
       //     return const HomePage();
       //   },
       // ),
-      home: PreApprovedOffer(),
+      home: CustomerConfirmation(),
       // home: BasicInformation(),
       theme: ThemeData(
         // AppBar theme

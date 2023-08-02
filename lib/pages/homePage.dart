@@ -102,7 +102,9 @@ class _HomePageState extends State<HomePage> {
                         onTap: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => SelectProduct(),
+                              builder: (context) => SelectProduct(
+                                userType: 'Customer',
+                              ),
                             ),
                           );
                         },
@@ -148,7 +150,9 @@ class _HomePageState extends State<HomePage> {
                         onTap: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => SelectProduct(),
+                              builder: (context) => SelectProduct(
+                                userType: 'BankRep',
+                              ),
                             ),
                           );
                         },

@@ -92,7 +92,7 @@ class _PreApprovedOfferHLState extends State<PreApprovedOfferHL> {
                           colors: [Color(0xff022DDB), Color(0xff0026Bf)],
                         ).createShader(bounds),
                         child: Text(
-                          format.format(globals.amount),
+                          format.format(20000000),
                           style: TextStyle(
                             fontSize: 34.0,
                             color: Colors.white,

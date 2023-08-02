@@ -120,8 +120,8 @@ class _HomePageState extends State<HomePage> {
                                       horizontal: 14, vertical: 14),
                                   child: Column(
                                     children: [
-                                      Icon(
-                                        Icons.account_circle_outlined,
+                                      ImageIcon(
+                                        AssetImage("assets/Vector.png"),
                                         size: 30,
                                       ),
                                       SizedBox(
@@ -166,7 +166,10 @@ class _HomePageState extends State<HomePage> {
                                       horizontal: 14, vertical: 14),
                                   child: Column(
                                     children: [
-                                      Icon(Icons.support_agent, size: 30),
+                                      ImageIcon(
+                                        AssetImage("assets/bank_rep.png"),
+                                        size: 30,
+                                      ),
                                       SizedBox(
                                         height: 10,
                                       ),

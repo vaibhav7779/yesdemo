@@ -1,25 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:sar/pages/common/kyc.dart';
+import 'package:sar/pages/HL/form.dart';
+import 'package:sar/pages/HL/kyc.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 
-import '../form2.dart';
+import 'form2.dart';
 
 enum ProductType { Gold, Silver, Dimond, Blank }
 
-class CustomerConfirmation extends StatefulWidget {
-  const CustomerConfirmation({super.key});
+class CustomerConfirmationHL extends StatefulWidget {
+  const CustomerConfirmationHL({super.key});
 
   @override
-  State<CustomerConfirmation> createState() => _CustomerConfirmationState();
+  State<CustomerConfirmationHL> createState() => _CustomerConfirmationHLState();
 }
 
-class _CustomerConfirmationState extends State<CustomerConfirmation> {
+class _CustomerConfirmationHLState extends State<CustomerConfirmationHL> {
   ProductType? _productType;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Personal Loan"),
+        title: const Text("Home Loan"),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),
@@ -39,10 +41,17 @@ class _CustomerConfirmationState extends State<CustomerConfirmation> {
               const SizedBox(
                 height: 20,
               ),
-              const Text("Progress bar"),
-              const SizedBox(
-                height: 40,
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [Text(" "), Text("3/4")],
               ),
+              const SizedBox(height: 10),
+              const StepProgressIndicator(
+                totalSteps: 4,
+                currentStep: 3,
+                selectedColor: Color(0xff022DDB),
+              ),
+              const SizedBox(height: 20),
               Text(
                 'Customer Confirmation ',
                 style: TextStyle(
@@ -162,7 +171,7 @@ class _CustomerConfirmationState extends State<CustomerConfirmation> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => BasicForm(),
+                          builder: (context) => PermanentAddress(),
                         ),
                       );
                     },

@@ -1,24 +1,26 @@
 import 'package:flutter/material.dart';
-
-import 'form.dart';
+import 'package:sar/pages/HL/kyc.dart';
 // import 'package:flutter_breadcrumb/flutter_breadcrumb.dart';
 // import 'package:sar/pages/add_bank.dart';
 // import 'package:sar/pages/employment.dart';
-// import 'package:step_progress_indicator/step_progress_indicator.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
+//import 'package:validation/validation.dart';
+
+import 'form2.dart';
 
 bool isChecked = false;
 
-class BasicForm extends StatefulWidget {
-  const BasicForm({super.key});
+class CurrentAddress extends StatefulWidget {
+  const CurrentAddress({super.key});
 
   @override
-  State<BasicForm> createState() => _BasicFormState();
+  State<CurrentAddress> createState() => _CurrentAddressState();
 }
 
-class _BasicFormState extends State<BasicForm> {
+class _CurrentAddressState extends State<CurrentAddress> {
   bool? check1 = false;
   bool? check2 = false;
-  String? consent;
+  bool _value = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,15 +69,19 @@ class _BasicFormState extends State<BasicForm> {
 
               const SizedBox(height: 20),
 
-              // const SizedBox(height: 10),
-              // //const StepProgressIndicator(
-              //   totalSteps: 11,
-              //   currentStep: 2,
-              //   selectedColor: Color(0xFF45C00B),
-              // ),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [Text(" "), Text("3/4")],
+              ),
+              const SizedBox(height: 10),
+              const StepProgressIndicator(
+                totalSteps: 4,
+                currentStep: 3,
+                selectedColor: Color(0xff022DDB),
+              ),
               const SizedBox(height: 24),
               const Text(
-                "Fetching details from Adhaar",
+                "Add Current address",
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w400,
@@ -93,19 +99,11 @@ class _BasicFormState extends State<BasicForm> {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       const SizedBox(height: 20),
-                      const Text(
-                        "We have fetch bellow deails from out records",
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                      const SizedBox(height: 25),
                       TextFormField(
                         autofocus: false,
-                        initialValue: "Amit kumar",
+                        initialValue: "123/10, Laxmi Niwas",
                         decoration: const InputDecoration(
-                          labelText: "Name",
+                          labelText: "Address line 1",
                           border: OutlineInputBorder(),
                           filled: true, //<-- SEE HERE
                           fillColor: Color(0xFFF5F5F5),
@@ -115,9 +113,9 @@ class _BasicFormState extends State<BasicForm> {
                       const SizedBox(height: 20),
                       TextFormField(
                         autofocus: false,
-                        initialValue: "AAAAAOOOOA",
+                        initialValue: "Opp,Green Park Post Office,Green Park",
                         decoration: const InputDecoration(
-                          labelText: "Pan",
+                          labelText: "Address line 1",
                           border: OutlineInputBorder(),
                           filled: true, //<-- SEE HERE
                           fillColor: Color(0xFFF5F5F5),
@@ -127,9 +125,9 @@ class _BasicFormState extends State<BasicForm> {
                       const SizedBox(height: 20),
                       TextFormField(
                         autofocus: false,
-                        initialValue: "Rita Ramesh",
+                        initialValue: "110001",
                         decoration: const InputDecoration(
-                          labelText: "Mother Name",
+                          labelText: "Pincode",
                           border: OutlineInputBorder(),
                           filled: true, //<-- SEE HERE
                           fillColor: Color(0xFFF5F5F5),
@@ -139,9 +137,9 @@ class _BasicFormState extends State<BasicForm> {
                       const SizedBox(height: 20),
                       TextFormField(
                         autofocus: false,
-                        initialValue: "Ramesh kumar",
+                        initialValue: "Delhi",
                         decoration: const InputDecoration(
-                          labelText: "Father Name",
+                          labelText: "City",
                           border: OutlineInputBorder(),
                           filled: true, //<-- SEE HERE
                           fillColor: Color(0xFFF5F5F5),
@@ -151,9 +149,9 @@ class _BasicFormState extends State<BasicForm> {
                       const SizedBox(height: 20),
                       TextFormField(
                         autofocus: false,
-                        initialValue: "123/10,Green park,Delhi-110001",
+                        initialValue: "Delhi",
                         decoration: const InputDecoration(
-                          labelText: "Address",
+                          labelText: "State",
                           border: OutlineInputBorder(),
                           filled: true, //<-- SEE HERE
                           fillColor: Color(0xFFF5F5F5),
@@ -161,90 +159,47 @@ class _BasicFormState extends State<BasicForm> {
                         readOnly: true,
                       ),
                       const SizedBox(height: 20),
-                    ],
-                  ),
-                ),
-              ),
-
-              const SizedBox(height: 20),
-              const Text(
-                "Current address Confirmation",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w400,
-                ),
-              ),
-
-              const SizedBox(height: 20),
-
-//yes no code
-
-              Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15.0),
-                ),
-                elevation: 5,
-                child: Padding(
-                  padding: const EdgeInsets.all(20),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      const Text(
-                          "Is co-applicant the co-owner of the property?"),
                       Row(
                         children: [
-                          Expanded(
-                              child: ConstrainedBox(
-                            constraints: const BoxConstraints(
-                              maxWidth: 300,
+                          Checkbox(
+                            value: _value,
+                            onChanged: (value) {
+                              setState(() {
+                                _value = value!;
+                              });
+                            },
+                          ),
+                          const SizedBox(width: 20),
+                          const Flexible(
+                            child: Text(
+                              "I accept and agree all details furnished by me are correct",
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w400,
+                              ),
                             ),
-                            child: RadioListTile(
-                              title: const Text("Yes"),
-                              value: "Yes",
-                              groupValue: consent,
-                              onChanged: (value) {
-                                setState(() {
-                                  consent = value.toString();
-                                });
-                              },
-                            ),
-                          )),
-                          Expanded(
-                              child: ConstrainedBox(
-                            constraints: const BoxConstraints(
-                              maxWidth: 300,
-                            ),
-                            child: RadioListTile(
-                              title: const Text("No"),
-                              value: "No",
-                              groupValue: consent,
-                              onChanged: (value) {
-                                setState(() {
-                                  consent = value.toString();
-                                });
-                              },
-                            ),
-                          )),
+                          ),
                         ],
                       ),
                     ],
                   ),
                 ),
               ),
-
               const SizedBox(height: 20),
               Container(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => BasicInformation(),
-                      ),
-                    );
-                  },
-                  child: const Text("Proceed"),
+                  onPressed: _value == true
+                      ? () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => KYC_HL(),
+                            ),
+                          );
+                        }
+                      : null,
+                  child: const Text('continue'),
                 ),
               ),
             ],

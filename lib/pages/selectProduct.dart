@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:sar/pages/creditcard/success.dart';
+
+import 'HL/offer_hl.dart';
+import 'PL/offer_pl.dart';
+import 'PayLater/offer.dart';
+import 'SA/Savings_account.dart';
 //import 'package:sar/pages/login.dart';
 
 class SelectProduct extends StatefulWidget {
@@ -98,7 +103,7 @@ class _SelectProductState extends State<SelectProduct> {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (context) =>
-                                  Success(), //Change to valid path
+                                  SavingsAccount(), //Change to valid path
                             ),
                           );
                         },
@@ -116,8 +121,8 @@ class _SelectProductState extends State<SelectProduct> {
                                       horizontal: 14, vertical: 14),
                                   child: Column(
                                     children: [
-                                      Icon(
-                                        Icons.account_circle_outlined,
+                                      ImageIcon(
+                                        AssetImage("assets/savings.png"),
                                         size: 30,
                                       ),
                                       SizedBox(
@@ -145,7 +150,7 @@ class _SelectProductState extends State<SelectProduct> {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (context) =>
-                                  Success(), //Change to valid path
+                                  PreApprovedOfferPL(), //Change to valid path
                             ),
                           );
                         },
@@ -163,7 +168,10 @@ class _SelectProductState extends State<SelectProduct> {
                                       horizontal: 14, vertical: 14),
                                   child: Column(
                                     children: [
-                                      Icon(Icons.support_agent, size: 30),
+                                      ImageIcon(
+                                        AssetImage("assets/personal.png"),
+                                        size: 30,
+                                      ),
                                       SizedBox(
                                         height: 10,
                                       ),
@@ -194,7 +202,7 @@ class _SelectProductState extends State<SelectProduct> {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (context) =>
-                                  Success(), //Change to valid path
+                                  PreApprovedOfferPayLater(), //Change to valid path
                             ),
                           );
                         },
@@ -212,8 +220,8 @@ class _SelectProductState extends State<SelectProduct> {
                                       horizontal: 14, vertical: 14),
                                   child: Column(
                                     children: [
-                                      Icon(
-                                        Icons.account_circle_outlined,
+                                      ImageIcon(
+                                        AssetImage("assets/pay_later.png"),
                                         size: 30,
                                       ),
                                       SizedBox(
@@ -238,12 +246,12 @@ class _SelectProductState extends State<SelectProduct> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  Success(), //Change to valid path
-                            ),
-                          );
+                          // Navigator.of(context).push(
+                          //   MaterialPageRoute(
+                          //     builder: (context) =>
+                          //         PreApprovedOfferPL(), //Change to valid path
+                          //   ),
+                          // );
                         },
                         child: SizedBox(
                           width: MediaQuery.of(context).size.width * 0.45,
@@ -259,7 +267,10 @@ class _SelectProductState extends State<SelectProduct> {
                                       horizontal: 14, vertical: 14),
                                   child: Column(
                                     children: [
-                                      Icon(Icons.support_agent, size: 30),
+                                      ImageIcon(
+                                        AssetImage("assets/cc.png"),
+                                        size: 30,
+                                      ),
                                       SizedBox(
                                         height: 10,
                                       ),
@@ -287,12 +298,12 @@ class _SelectProductState extends State<SelectProduct> {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  Success(), //Change to valid path
-                            ),
-                          );
+                          // Navigator.of(context).push(
+                          //   MaterialPageRoute(
+                          //     builder: (context) =>
+                          //         PreApprovedOfferPL(), //Change to valid path
+                          //   ),
+                          // );
                         },
                         child: SizedBox(
                           width: MediaQuery.of(context).size.width * 0.45,
@@ -308,8 +319,8 @@ class _SelectProductState extends State<SelectProduct> {
                                       horizontal: 14, vertical: 14),
                                   child: Column(
                                     children: [
-                                      Icon(
-                                        Icons.account_circle_outlined,
+                                      ImageIcon(
+                                        AssetImage("assets/forex.png"),
                                         size: 30,
                                       ),
                                       SizedBox(
@@ -337,7 +348,7 @@ class _SelectProductState extends State<SelectProduct> {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (context) =>
-                                  Success(), //Change to valid path
+                                  PreApprovedOfferHL(), //Change to valid path
                             ),
                           );
                         },
@@ -355,7 +366,10 @@ class _SelectProductState extends State<SelectProduct> {
                                       horizontal: 14, vertical: 14),
                                   child: Column(
                                     children: [
-                                      Icon(Icons.support_agent, size: 30),
+                                      ImageIcon(
+                                        AssetImage("assets/home_loan.png"),
+                                        size: 30,
+                                      ),
                                       SizedBox(
                                         height: 10,
                                       ),

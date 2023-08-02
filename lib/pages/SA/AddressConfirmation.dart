@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sar/pages/SA/kyc.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 enum ProductType { Gold, Silver, Dimond, Blank }
 
@@ -10,7 +12,7 @@ class AddressConfirmation extends StatefulWidget {
 }
 
 class _AddressConfirmationState extends State<AddressConfirmation> {
-  String? consent;
+  String consent = "F";
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +44,16 @@ class _AddressConfirmationState extends State<AddressConfirmation> {
               const SizedBox(
                 height: 20,
               ),
-              const Text("Progress bar"),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [Text(" "), Text("3/4")],
+              ),
+              const SizedBox(height: 10),
+              const StepProgressIndicator(
+                totalSteps: 4,
+                currentStep: 3,
+                selectedColor: Color(0xff022DDB),
+              ),
               const SizedBox(
                 height: 40,
               ),
@@ -66,6 +77,8 @@ class _AddressConfirmationState extends State<AddressConfirmation> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      Text(
+                          "Is your current address same as that of Aadhaar address?"),
                       Row(
                         children: [
                           Expanded(
@@ -115,14 +128,18 @@ class _AddressConfirmationState extends State<AddressConfirmation> {
                 child: SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => AddressConfirmation(),
-                        ),
-                      );
-                    },
+                    onPressed: (consent == "F")
+                        ? null
+                        : () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => KYC_SA(
+                                  consent: consent,
+                                ),
+                              ),
+                            );
+                          },
                     child: const Text("Proceed"),
                   ),
                 ),

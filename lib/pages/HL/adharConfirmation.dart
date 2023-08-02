@@ -132,7 +132,7 @@ class _CustomerConfirmationHLState extends State<CustomerConfirmationHL> {
                                   borderRadius: BorderRadius.circular(5.0)),
                               value: ProductType.Silver,
                               groupValue: _productType,
-                              title: Row(
+                              title: const Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
@@ -148,11 +148,7 @@ class _CustomerConfirmationHLState extends State<CustomerConfirmationHL> {
                                 ],
                               ),
                               dense: true,
-                              onChanged: (value) {
-                                setState(() {
-                                  _productType = value;
-                                });
-                              },
+                              onChanged: null,
                             ),
                           ),
                         ],

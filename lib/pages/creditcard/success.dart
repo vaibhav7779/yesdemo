@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart' as intl;
 import 'package:sar/global.dart' as globals;
 
-import 'package:sar/pages/common/adharConfirmation.dart';
+//import 'package:sar/pages/common/adharConfirmation.dart';
 
 class Success extends StatefulWidget {
   const Success({super.key});
@@ -14,7 +14,6 @@ class Success extends StatefulWidget {
 }
 
 class _SuccessState extends State<Success> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +37,6 @@ class _SuccessState extends State<Success> {
               const SizedBox(
                 height: 20,
               ),
-
               const Text(
                 "Hi Sakshi,",
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
@@ -92,7 +90,6 @@ class _SuccessState extends State<Success> {
                           builder: (context) => Success(),
                         ),
                       );
-
                     },
                     child: const Text("Submit"),
                   ),

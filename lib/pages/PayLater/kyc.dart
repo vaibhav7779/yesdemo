@@ -166,11 +166,7 @@ class _KYC_PayLaterState extends State<KYC_PayLater> {
                                 ],
                               ),
                               dense: true,
-                              onChanged: (value) {
-                                setState(() {
-                                  _productType = value;
-                                });
-                              },
+                              onChanged: null,
                             ),
                           ),
                         ],

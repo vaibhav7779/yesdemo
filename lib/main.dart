@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:sar/pages/HL/offer_hl.dart';
+import 'package:sar/pages/PayLater/offer.dart';
 // import 'package:sar/pages/common/adharConfirmation.dart';
 // import 'package:sar/pages/common/preApproved.dart';
 import 'package:sar/pages/creditcard/card.dart';
@@ -62,7 +63,7 @@ class _MyAppState extends State<MyApp> {
       //     return const HomePage();
       //   },
       // ),
-      home: PreApprovedOfferHL(),
+      home: HomePage(),
       // home: BasicInformation(),
       theme: ThemeData(
         // AppBar theme

@@ -11,7 +11,8 @@ import 'package:sar/pages/creditcard/card.dart';
 //import 'package:sar/pages/login.dart';
 
 class SelectProduct extends StatefulWidget {
-  const SelectProduct({super.key});
+  final String userType;
+  const SelectProduct({super.key, required this.userType});
 
   @override
   State<SelectProduct> createState() => _SelectProductState();
@@ -149,14 +150,16 @@ class _SelectProductState extends State<SelectProduct> {
                         width: 12,
                       ),
                       GestureDetector(
-                        onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  PreApprovedOfferPL(), //Change to valid path
-                            ),
-                          );
-                        },
+                        onTap: (widget.userType == "BankRep")
+                            ? null
+                            : () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        PreApprovedOfferPL(), //Change to valid path
+                                  ),
+                                );
+                              },
                         child: SizedBox(
                           width: MediaQuery.of(context).size.width * 0.45,
                           child: Card(
@@ -201,14 +204,16 @@ class _SelectProductState extends State<SelectProduct> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       GestureDetector(
-                        onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  PreApprovedOfferPayLater(), //Change to valid path
-                            ),
-                          );
-                        },
+                        onTap: (widget.userType == "BankRep")
+                            ? null
+                            : () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        PreApprovedOfferPayLater(), //Change to valid path
+                                  ),
+                                );
+                              },
                         child: SizedBox(
                           width: MediaQuery.of(context).size.width * 0.45,
                           child: Card(
@@ -248,14 +253,16 @@ class _SelectProductState extends State<SelectProduct> {
                         width: 12,
                       ),
                       GestureDetector(
-                        onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  Cardimage(), //Change to valid path
-                            ),
-                          );
-                        },
+                        onTap: (widget.userType == "BankRep")
+                            ? null
+                            : () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        Cardimage(), //Change to valid path
+                                  ),
+                                );
+                              },
                         child: SizedBox(
                           width: MediaQuery.of(context).size.width * 0.45,
                           child: Card(
@@ -347,14 +354,16 @@ class _SelectProductState extends State<SelectProduct> {
                         width: 12,
                       ),
                       GestureDetector(
-                        onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  PreApprovedOfferHL(), //Change to valid path
-                            ),
-                          );
-                        },
+                        onTap: (widget.userType == "BankRep")
+                            ? null
+                            : () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        PreApprovedOfferHL(), //Change to valid path
+                                  ),
+                                );
+                              },
                         child: SizedBox(
                           width: MediaQuery.of(context).size.width * 0.45,
                           child: Card(

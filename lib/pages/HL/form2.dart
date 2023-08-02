@@ -200,21 +200,18 @@ class _PermanentAddressState extends State<PermanentAddress> {
                       Row(
                         children: [
                           Expanded(
-                              child: ConstrainedBox(
-                            constraints: const BoxConstraints(
-                              maxWidth: 300,
+                            child: ConstrainedBox(
+                              constraints: const BoxConstraints(
+                                maxWidth: 300,
+                              ),
+                              child: RadioListTile(
+                                title: const Text("Yes"),
+                                value: "Yes",
+                                groupValue: consent,
+                                onChanged: null,
+                              ),
                             ),
-                            child: RadioListTile(
-                              title: const Text("Yes"),
-                              value: "Yes",
-                              groupValue: consent,
-                              onChanged: (value) {
-                                setState(() {
-                                  consent = value.toString();
-                                });
-                              },
-                            ),
-                          )),
+                          ),
                           Expanded(
                               child: ConstrainedBox(
                             constraints: const BoxConstraints(

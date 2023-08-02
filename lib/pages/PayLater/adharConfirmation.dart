@@ -155,11 +155,7 @@ class _CustomerConfirmationPayLaterState
                                 ],
                               ),
                               dense: true,
-                              onChanged: (value) {
-                                setState(() {
-                                  _productType = value;
-                                });
-                              },
+                              onChanged: null,
                             ),
                           ),
                         ],

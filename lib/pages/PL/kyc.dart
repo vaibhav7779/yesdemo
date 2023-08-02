@@ -162,11 +162,7 @@ class _KYC_PLState extends State<KYC_PL> {
                                 ],
                               ),
                               dense: true,
-                              onChanged: (value) {
-                                setState(() {
-                                  _productType = value;
-                                });
-                              },
+                              onChanged: null,
                             ),
                           ),
                         ],

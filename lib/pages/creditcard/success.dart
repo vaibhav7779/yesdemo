@@ -14,6 +14,7 @@ class Success extends StatefulWidget {
 }
 
 class _SuccessState extends State<Success> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,11 +38,11 @@ class _SuccessState extends State<Success> {
               const SizedBox(
                 height: 20,
               ),
-              const Text("Hi Sakshi,"),
-              const SizedBox(
-                height: 20,
+
+              const Text(
+                "Hi Sakshi,",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
               ),
-              const Text("Progress bar"),
               const SizedBox(
                 height: 20,
               ),
@@ -91,6 +92,7 @@ class _SuccessState extends State<Success> {
                           builder: (context) => Success(),
                         ),
                       );
+
                     },
                     child: const Text("Submit"),
                   ),

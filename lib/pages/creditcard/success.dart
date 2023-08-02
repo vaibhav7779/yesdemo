@@ -3,16 +3,18 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart' as intl;
 import 'package:sar/global.dart' as globals;
-import 'package:step_progress_indicator/step_progress_indicator.dart';
 
-class SuccessHL extends StatefulWidget {
-  const SuccessHL({super.key});
+import 'package:sar/pages/common/adharConfirmation.dart';
+
+class Success extends StatefulWidget {
+  const Success({super.key});
 
   @override
-  State<SuccessHL> createState() => _SuccessHLState();
+  State<Success> createState() => _SuccessState();
 }
 
-class _SuccessHLState extends State<SuccessHL> {
+class _SuccessState extends State<Success> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,6 +38,7 @@ class _SuccessHLState extends State<SuccessHL> {
               const SizedBox(
                 height: 20,
               ),
+
               const Text(
                 "Hi Sakshi,",
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
@@ -83,12 +86,13 @@ class _SuccessHLState extends State<SuccessHL> {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => SuccessHL(),
-                      //   ),
-                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Success(),
+                        ),
+                      );
+
                     },
                     child: const Text("Submit"),
                   ),

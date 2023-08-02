@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sar/pages/common/success.dart';
+import 'package:sar/pages/creditcard/success.dart';
 //import 'package:sar/pages/login.dart';
 
 class SelectProduct extends StatefulWidget {

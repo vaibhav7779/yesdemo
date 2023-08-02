@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:sar/pages/creditcard/videoKyc.dart';
+// import 'package:sar/pages/common/videoKyc.dart';
+
+import 'success.dart';
+import 'customerinfo.dart';
 
 enum ProductType { Gold, Silver, Dimond, Blank }
 
@@ -17,7 +21,7 @@ class _KYCState extends State<KYC> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Personal Loan"),
+        title: const Text("Credit Card"),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),

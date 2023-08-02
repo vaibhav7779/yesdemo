@@ -47,12 +47,12 @@ class _PreApprovedOfferHLState extends State<PreApprovedOfferHL> {
               ),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [Text(" "), Text("3/4")],
+                children: [Text(" "), Text("2/4")],
               ),
               const SizedBox(height: 10),
               const StepProgressIndicator(
                 totalSteps: 4,
-                currentStep: 3,
+                currentStep: 2,
                 selectedColor: Color(0xff022DDB),
               ),
               const SizedBox(

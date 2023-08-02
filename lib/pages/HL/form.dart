@@ -199,7 +199,7 @@ class _CurrentAddressState extends State<CurrentAddress> {
                           );
                         }
                       : null,
-                  child: const Text('continue'),
+                  child: const Text('Proceed'),
                 ),
               ),
             ],

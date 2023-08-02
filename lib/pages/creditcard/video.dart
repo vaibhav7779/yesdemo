@@ -41,7 +41,6 @@ class _SuccessState extends State<Success> {
               const SizedBox(
                 height: 20,
               ),
-              const Text("Progress bar"),
               const SizedBox(
                 height: 20,
               ),

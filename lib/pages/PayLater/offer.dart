@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart' as intl;
 import 'package:sar/global.dart' as globals;
 import 'package:sar/pages/PayLater/adharConfirmation.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 class PreApprovedOfferPayLater extends StatefulWidget {
   const PreApprovedOfferPayLater({super.key});
@@ -37,6 +38,7 @@ class _PreApprovedOfferPayLaterState extends State<PreApprovedOfferPayLater> {
           padding: const EdgeInsets.all(20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
+            // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(
                 height: 20,
@@ -45,11 +47,19 @@ class _PreApprovedOfferPayLaterState extends State<PreApprovedOfferPayLater> {
               const SizedBox(
                 height: 20,
               ),
-              const Text("Progress bar"),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [Text(" "), Text("2/4")],
+              ),
+              const SizedBox(height: 10),
+              const StepProgressIndicator(
+                totalSteps: 4,
+                currentStep: 2,
+                selectedColor: Color(0xff022DDB),
+              ),
               const SizedBox(
                 height: 20,
               ),
-              
               Card(
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15.0),
@@ -74,7 +84,7 @@ class _PreApprovedOfferPayLaterState extends State<PreApprovedOfferPayLater> {
                       const Text(
                         'You have been approved for a pay later of',
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 14,
                           fontWeight: FontWeight.w400,
                         ),
                       ),
@@ -84,7 +94,7 @@ class _PreApprovedOfferPayLaterState extends State<PreApprovedOfferPayLater> {
                           colors: [Color(0xff022DDB), Color(0xff0026Bf)],
                         ).createShader(bounds),
                         child: Text(
-                          format.format(globals.amount),
+                          format.format(60000),
                           style: TextStyle(
                             fontSize: 34.0,
                             color: Colors.white,

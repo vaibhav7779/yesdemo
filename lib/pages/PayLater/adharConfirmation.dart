@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sar/pages/PayLater/kyc.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 // import '../HL/form2.dart';
 
@@ -41,7 +42,20 @@ class _CustomerConfirmationPayLaterState
               const SizedBox(
                 height: 20,
               ),
-              const Text("Progress bar"),
+              const Text("Hello Sakshi, you are just a few steps away"),
+              const SizedBox(
+                height: 20,
+              ),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [Text(" "), Text("3/4")],
+              ),
+              const SizedBox(height: 10),
+              const StepProgressIndicator(
+                totalSteps: 4,
+                currentStep: 3,
+                selectedColor: Color(0xff022DDB),
+              ),
               const SizedBox(
                 height: 40,
               ),

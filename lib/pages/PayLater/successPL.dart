@@ -31,15 +31,15 @@ class _SuccessPayLaterState extends State<SuccessPayLater> {
           padding: const EdgeInsets.all(20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(
                 height: 20,
               ),
-              const Text("Hi Sakshi,"),
-              const SizedBox(
-                height: 20,
+              const Text(
+                "Hi Sakshi,",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
               ),
-              const Text("Progress bar"),
               const SizedBox(
                 height: 20,
               ),

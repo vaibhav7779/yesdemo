@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sar/pages/PayLater/successPL.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 class VideoKYC_PayLater extends StatefulWidget {
   const VideoKYC_PayLater({super.key});
@@ -30,6 +31,17 @@ class _VideoKYC_PayLaterState extends State<VideoKYC_PayLater> {
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Column(children: [
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [Text(" "), Text("4/4")],
+              ),
+              const SizedBox(height: 10),
+              const StepProgressIndicator(
+                totalSteps: 4,
+                currentStep: 4,
+                selectedColor: Color(0xff022DDB),
+              ),
+              const SizedBox(height: 30),
               Card(
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15.0),
@@ -122,7 +134,7 @@ class _VideoKYC_PayLaterState extends State<VideoKYC_PayLater> {
                         ],
                       ),
                       //
-                     const SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
@@ -136,11 +148,13 @@ class _VideoKYC_PayLaterState extends State<VideoKYC_PayLater> {
                             },
                           ),
                           const SizedBox(width: 20),
-                          const Text(
-                            "I agree to the Terms and Conditions and Privacy Policy",
-                            style: TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
+                          const Flexible(
+                            child: Text(
+                              "I agree to the Terms and Conditions and Privacy Policy",
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w400,
+                              ),
                             ),
                           ),
                         ],

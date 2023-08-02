@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart' as intl;
 import 'package:sar/global.dart' as globals;
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 class SuccessHL extends StatefulWidget {
   const SuccessHL({super.key});
@@ -39,7 +40,16 @@ class _SuccessHLState extends State<SuccessHL> {
               const SizedBox(
                 height: 20,
               ),
-              const Text("Progress bar"),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [Text(" "), Text("3/4")],
+              ),
+              const SizedBox(height: 10),
+              const StepProgressIndicator(
+                totalSteps: 4,
+                currentStep: 3,
+                selectedColor: Color(0xff022DDB),
+              ),
               const SizedBox(
                 height: 20,
               ),

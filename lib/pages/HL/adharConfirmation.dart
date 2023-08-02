@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sar/pages/HL/form.dart';
 import 'package:sar/pages/HL/kyc.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 import 'form2.dart';
 
@@ -40,9 +41,18 @@ class _CustomerConfirmationHLState extends State<CustomerConfirmationHL> {
               const SizedBox(
                 height: 20,
               ),
-              const Text("Progress bar"),
               const SizedBox(
-                height: 40,
+                height: 20,
+              ),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [Text(" "), Text("3/4")],
+              ),
+              const SizedBox(height: 10),
+              const StepProgressIndicator(
+                totalSteps: 4,
+                currentStep: 3,
+                selectedColor: Color(0xff022DDB),
               ),
               Text(
                 'Customer Confirmation ',

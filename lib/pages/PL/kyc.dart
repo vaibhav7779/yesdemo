@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sar/pages/PL/vKYC.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 enum ProductType { Gold, Silver, Dimond, Blank }
 
@@ -17,7 +18,7 @@ class _KYC_PLState extends State<KYC_PL> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Personal Loan"),
+        title: const Text("KYC Module"),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),
@@ -34,7 +35,16 @@ class _KYC_PLState extends State<KYC_PL> {
               const SizedBox(
                 height: 20,
               ),
-              const Text("Progress bar"),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [Text(" "), Text("3/4")],
+              ),
+              const SizedBox(height: 10),
+              const StepProgressIndicator(
+                totalSteps: 4,
+                currentStep: 3,
+                selectedColor: Color(0xff022DDB),
+              ),
               const SizedBox(
                 height: 40,
               ),
@@ -78,7 +88,7 @@ class _KYC_PLState extends State<KYC_PL> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Video KYC_PL',
+                                'Video KYC',
                                 style: TextStyle(
                                     fontSize: 14, fontWeight: FontWeight.bold),
                               ),

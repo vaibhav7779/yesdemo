@@ -70,9 +70,7 @@ class _PermanentAddressState extends State<PermanentAddress> {
               const SizedBox(height: 20),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Align(alignment: Alignment.topRight, child: Text("3/4"))
-                ],
+                children: [Text(" "), Text("3/4")],
               ),
               const SizedBox(height: 10),
               const StepProgressIndicator(

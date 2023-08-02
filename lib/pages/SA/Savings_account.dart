@@ -43,9 +43,7 @@ class _SavingsAccountState extends State<SavingsAccount> {
                   style: TextStyle(fontSize: 18)),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Align(alignment: Alignment.topRight, child: Text("2/4"))
-                ],
+                children: [Text(" "), Text("2/4")],
               ),
               const SizedBox(height: 10),
               const StepProgressIndicator(

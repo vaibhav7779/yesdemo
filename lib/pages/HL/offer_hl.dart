@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart' as intl;
 import 'package:sar/global.dart' as globals;
 import 'package:sar/pages/HL/adharConfirmation.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 class PreApprovedOfferHL extends StatefulWidget {
   const PreApprovedOfferHL({super.key});
@@ -44,7 +45,16 @@ class _PreApprovedOfferHLState extends State<PreApprovedOfferHL> {
               const SizedBox(
                 height: 20,
               ),
-              const Text("Progress bar"),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [Text(" "), Text("3/4")],
+              ),
+              const SizedBox(height: 10),
+              const StepProgressIndicator(
+                totalSteps: 4,
+                currentStep: 3,
+                selectedColor: Color(0xff022DDB),
+              ),
               const SizedBox(
                 height: 20,
               ),

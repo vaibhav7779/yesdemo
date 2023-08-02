@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart' as intl;
 import 'package:sar/global.dart' as globals;
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 class SuccessPL extends StatefulWidget {
   const SuccessPL({super.key});
@@ -31,15 +32,28 @@ class _SuccessPLState extends State<SuccessPL> {
           padding: const EdgeInsets.all(20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(
                 height: 20,
               ),
-              const Text("Hi Sakshi,"),
-              const SizedBox(
-                height: 20,
+              const Text(
+                "Hi Sakshi,",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
               ),
-              const Text("Progress bar"),
+              // const SizedBox(
+              //   height: 20,
+              // ),
+              // const Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //   children: [Text(" "), Text("3/4")],
+              // ),
+              // const SizedBox(height: 10),
+              // const StepProgressIndicator(
+              //   totalSteps: 4,
+              //   currentStep: 3,
+              //   selectedColor: Color(0xff022DDB),
+              // ),
               const SizedBox(
                 height: 20,
               ),

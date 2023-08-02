@@ -12,7 +12,7 @@ class AddressConfirmation extends StatefulWidget {
 }
 
 class _AddressConfirmationState extends State<AddressConfirmation> {
-  String? consent;
+  String consent = "F";
 
   @override
   Widget build(BuildContext context) {
@@ -128,14 +128,18 @@ class _AddressConfirmationState extends State<AddressConfirmation> {
                 child: SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => KYC_SA(),
-                        ),
-                      );
-                    },
+                    onPressed: (consent == "F")
+                        ? null
+                        : () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => KYC_SA(
+                                  consent: consent,
+                                ),
+                              ),
+                            );
+                          },
                     child: const Text("Proceed"),
                   ),
                 ),

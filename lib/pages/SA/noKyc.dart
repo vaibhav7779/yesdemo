@@ -1,21 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:sar/pages/SA/noKyc.dart';
 import 'package:sar/pages/SA/success_sa.dart';
 import 'package:sar/pages/SA/vKYC.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 enum ProductType { Gold, Silver, Dimond, Blank }
 
-class KYC_SA extends StatefulWidget {
-  final String consent;
-
-  const KYC_SA({super.key, required this.consent});
+class NO_KYC_SA extends StatefulWidget {
+  const NO_KYC_SA({super.key});
 
   @override
-  State<KYC_SA> createState() => _KYC_SAState();
+  State<NO_KYC_SA> createState() => _NO_KYC_SAState();
 }
 
-class _KYC_SAState extends State<KYC_SA> {
+class _NO_KYC_SAState extends State<NO_KYC_SA> {
   ProductType? _productType;
 
   @override
@@ -37,20 +34,47 @@ class _KYC_SAState extends State<KYC_SA> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                  'You are being assisted by our bank representative Sakshi',
-                  style: TextStyle(fontSize: 18)),
+                "Hi Sakshi,",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
               const SizedBox(
                 height: 20,
               ),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [Text(" "), Text("3/4")],
-              ),
-              const SizedBox(height: 10),
-              const StepProgressIndicator(
-                totalSteps: 4,
-                currentStep: 3,
-                selectedColor: Color(0xff022DDB),
+              Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                elevation: 5,
+                child: Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        child: Image.asset('assets/fingerprint.jpg'),
+                      ),
+                      const Text(
+                        'Sorry!',
+                        style: TextStyle(
+                          color: Color(0xff0025BA),
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      const Text(
+                        'We could not fetch your details. Please choose another KYC mode',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                    ],
+                  ),
+                ),
               ),
               const SizedBox(
                 height: 40,
@@ -95,7 +119,7 @@ class _KYC_SAState extends State<KYC_SA> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Biometric',
+                                'Physical KYC document',
                                 style: TextStyle(
                                     fontSize: 14, fontWeight: FontWeight.bold),
                               ),
@@ -105,7 +129,7 @@ class _KYC_SAState extends State<KYC_SA> {
                               Padding(
                                 padding: EdgeInsets.only(bottom: 12.0),
                                 child: Text(
-                                  'Fast and paperless KYC verification',
+                                  'We will need your signed physical proof of address and proof od identity documents',
                                   style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.w400),
@@ -149,7 +173,7 @@ class _KYC_SAState extends State<KYC_SA> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'Physical KYC document',
+                                    'Video KYC',
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold),
@@ -158,7 +182,7 @@ class _KYC_SAState extends State<KYC_SA> {
                                     height: 12,
                                   ),
                                   Text(
-                                    'We will collect your biometric details for paperless KYC_SA',
+                                    'We will need your Aadhaar authentication followed by Video KYC',
                                     style: TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w400),
@@ -191,15 +215,13 @@ class _KYC_SAState extends State<KYC_SA> {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      print(widget.consent);
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => (widget.consent == "No")
-                              ? NO_KYC_SA()
-                              : SuccessSA(),
-                        ),
-                      );
+                      // print(widget.consent);
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => SuccessSA(),
+                      //   ),
+                      // );
                     },
                     child: const Text("Proceed"),
                   ),

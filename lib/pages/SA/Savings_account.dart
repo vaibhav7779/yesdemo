@@ -48,7 +48,7 @@ class _SavingsAccountState extends State<SavingsAccount> {
               const SizedBox(height: 10),
               const StepProgressIndicator(
                 totalSteps: 4,
-                currentStep: 2,
+                currentStep: 1,
                 selectedColor: Color(0xff022DDB),
               ),
               const SizedBox(

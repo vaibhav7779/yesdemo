@@ -172,7 +172,7 @@ class _CustomerConfirmationSAState extends State<CustomerConfirmationSA> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => KYC_SA(),
+                          builder: (context) => KYC_SA(consent: "Y"),
                         ),
                       );
                     },

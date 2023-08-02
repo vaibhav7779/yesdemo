@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sar/pages/creditcard/videoKyc.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 // import 'package:sar/pages/common/videoKyc.dart';
 
 import 'customerinfo.dart';
@@ -20,7 +22,7 @@ class _KYCState extends State<KYC> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Personal Loan"),
+        title: const Text("Credit Card"),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),
@@ -37,7 +39,18 @@ class _KYCState extends State<KYC> {
               const SizedBox(
                 height: 20,
               ),
-              const Text("Progress bar"),
+              const Row(
+                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Align(alignment: Alignment.topRight, child: Text("4/4"))
+                ],
+              ),
+              const SizedBox(height: 10),
+              const StepProgressIndicator(
+                totalSteps: 4,
+                currentStep: 4,
+                selectedColor: Color(0xff022DDB),
+              ),
               const SizedBox(
                 height: 40,
               ),
@@ -185,7 +198,7 @@ class _KYCState extends State<KYC> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Custoinfo(),
+                          builder: (context) => VideoKYC(),
                         ),
                       );
                     },

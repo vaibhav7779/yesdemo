@@ -62,7 +62,7 @@ class _VideoKYCState extends State<VideoKYC> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => SuccessHL(),
+                          builder: (context) => Success(),
                         ),
                       );
                     },

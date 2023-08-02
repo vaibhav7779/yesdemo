@@ -1,5 +1,6 @@
 // import 'package:creditcard/video.dart';
 import 'package:flutter/material.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 import 'customerinfo.dart';
 // import 'package:sar/pages/common/success.dart';
@@ -16,7 +17,7 @@ class _CardimageState extends State<Cardimage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Personal Loan"),
+        title: const Text("Credit Card"),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),
@@ -30,8 +31,23 @@ class _CardimageState extends State<Cardimage> {
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(children: [
+            const Row(
+              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Align(alignment: Alignment.topRight, child: Text("2/4"))
+              ],
+            ),
+            const SizedBox(height: 10),
+            const StepProgressIndicator(
+              totalSteps: 4,
+              currentStep: 2,
+              selectedColor: Color(0xff022DDB),
+            ),
+            const SizedBox(
+              height: 16,
+            ),
             const Text(
-              'Best Curated offers with a card limit of 5,00,000 just for you',
+              'Best Curated offers with a card limit of ₹5,00,000 just for you',
               style: TextStyle(
                 fontSize: 27,
               ),
@@ -42,7 +58,7 @@ class _CardimageState extends State<Cardimage> {
             const Text(
               'Select a card that suit your needs                             ',
               style: TextStyle(
-                fontSize: 21,
+                fontSize: 18,
               ),
             ),
             const SizedBox(
@@ -111,7 +127,7 @@ class _CardimageState extends State<Cardimage> {
                       ),
                     );
                   },
-                  child: const Text("Proceed"),
+                  child: const Text("Get this card"),
                 ),
               ),
             )

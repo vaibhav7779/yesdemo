@@ -79,7 +79,7 @@ class _CustoinfoState extends State<Custoinfo> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        'Do you agree to voluntarily use your AAdhar details for video KYC?',
+                        'Do you agree to voluntarily use your Aadhaar details for video KYC?',
                         style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w400,
@@ -89,7 +89,7 @@ class _CustoinfoState extends State<Custoinfo> {
                         height: 20,
                       ),
                       const Text(
-                        'Use your AAdhar linked with mobile helps you complete your KYC without any documents submission',
+                        'Use your Aadhaar linked with mobile helps you complete your KYC without any documents submission',
                         style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w400,
@@ -112,7 +112,7 @@ class _CustoinfoState extends State<Custoinfo> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    'Continue with Aadhar ',
+                                    'Continue with Aadhaar ',
                                     style: TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w400),
@@ -143,7 +143,7 @@ class _CustoinfoState extends State<Custoinfo> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    'Aadhar not linked with mobile',
+                                    'Aadhaar not linked with mobile',
                                     style: TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w400),

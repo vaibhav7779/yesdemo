@@ -44,7 +44,7 @@ class _KYC_SAState extends State<KYC_SA> {
               ),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [Text(" "), Text("3/4")],
+                children: [Text(" "), Text("4/4")],
               ),
               const SizedBox(height: 10),
               const StepProgressIndicator(

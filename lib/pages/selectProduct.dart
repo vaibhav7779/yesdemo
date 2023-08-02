@@ -5,6 +5,7 @@ import 'package:sar/pages/PayLater/offer.dart';
 // import 'package:sar/pages/AddressConfirmation.dart';
 // import 'package:sar/pages/PL/offer_hl.dart';
 import 'package:sar/pages/SA/Savings_account.dart';
+import 'package:sar/pages/creditcard/card.dart';
 //import 'package:sar/pages/login.dart';
 
 class SelectProduct extends StatefulWidget {
@@ -246,12 +247,12 @@ class _SelectProductState extends State<SelectProduct> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          // Navigator.of(context).push(
-                          //   MaterialPageRoute(
-                          //     builder: (context) =>
-                          //         PreApprovedOfferPL(), //Change to valid path
-                          //   ),
-                          // );
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  Cardimage(), //Change to valid path
+                            ),
+                          );
                         },
                         child: SizedBox(
                           width: MediaQuery.of(context).size.width * 0.45,

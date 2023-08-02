@@ -17,11 +17,7 @@ class _SuccessHLState extends State<SuccessHL> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-<<<<<<<< HEAD:lib/pages/HL/successHL.dart
-        title: const Text("Home Loan"),
-========
         title: const Text("Credit Card"),
->>>>>>>> 1277c9d5585d17174d1d11e356d9fb73bef74ce0:lib/pages/creditcard/success.dart
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),

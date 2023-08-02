@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sar/pages/creditcard/success.dart';
+import 'package:sar/pages/creditcard/video.dart';
 
 class VideoKYC extends StatefulWidget {
   const VideoKYC({super.key});

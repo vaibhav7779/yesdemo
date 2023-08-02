@@ -37,12 +37,12 @@ class _KYC_HLState extends State<KYC_HL> {
               ),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [Text(" "), Text("3/4")],
+                children: [Text(" "), Text("4/4")],
               ),
               const SizedBox(height: 10),
               const StepProgressIndicator(
                 totalSteps: 4,
-                currentStep: 3,
+                currentStep: 4,
                 selectedColor: Color(0xff022DDB),
               ),
               const SizedBox(

@@ -36,19 +36,9 @@ class _SuccessHLState extends State<SuccessHL> {
               const SizedBox(
                 height: 20,
               ),
-              const Text("Hi Sakshi,"),
-              const SizedBox(
-                height: 20,
-              ),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [Text(" "), Text("3/4")],
-              ),
-              const SizedBox(height: 10),
-              const StepProgressIndicator(
-                totalSteps: 4,
-                currentStep: 3,
-                selectedColor: Color(0xff022DDB),
+              const Text(
+                "Hi Sakshi,",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
               ),
               const SizedBox(
                 height: 20,

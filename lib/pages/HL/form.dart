@@ -170,11 +170,13 @@ class _CurrentAddressState extends State<CurrentAddress> {
                             },
                           ),
                           const SizedBox(width: 20),
-                          const Text(
-                            "I accept and agree all details furnished by me are correct",
-                            style: TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
+                          const Flexible(
+                            child: Text(
+                              "I accept and agree all details furnished by me are correct",
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w400,
+                              ),
                             ),
                           ),
                         ],

@@ -41,9 +41,6 @@ class _CustomerConfirmationHLState extends State<CustomerConfirmationHL> {
               const SizedBox(
                 height: 20,
               ),
-              const SizedBox(
-                height: 20,
-              ),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [Text(" "), Text("3/4")],
@@ -54,6 +51,7 @@ class _CustomerConfirmationHLState extends State<CustomerConfirmationHL> {
                 currentStep: 3,
                 selectedColor: Color(0xff022DDB),
               ),
+              const SizedBox(height: 20),
               Text(
                 'Customer Confirmation ',
                 style: TextStyle(

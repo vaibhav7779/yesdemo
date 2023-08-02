@@ -45,9 +45,7 @@ class _CustoinfoState extends State<Custoinfo> {
               ),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Align(alignment: Alignment.topRight, child: Text("3/4"))
-                ],
+                children: [Text(" "), Text("3/4")],
               ),
               const SizedBox(height: 10),
               const StepProgressIndicator(
@@ -154,11 +152,7 @@ class _CustoinfoState extends State<Custoinfo> {
                                 ],
                               ),
                               dense: true,
-                              onChanged: (value) {
-                                setState(() {
-                                  _productType = value;
-                                });
-                              },
+                              onChanged: null,
                             ),
                           ),
                         ],

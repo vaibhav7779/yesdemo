@@ -22,7 +22,7 @@ class _KYCState extends State<KYC> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Credit Card"),
+        title: const Text("KYC Module"),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),
@@ -40,10 +40,8 @@ class _KYCState extends State<KYC> {
                 height: 20,
               ),
               const Row(
-                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Align(alignment: Alignment.topRight, child: Text("4/4"))
-                ],
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [Text(" "), Text("4/4")],
               ),
               const SizedBox(height: 10),
               const StepProgressIndicator(
@@ -173,11 +171,7 @@ class _KYCState extends State<KYC> {
                                 ],
                               ),
                               dense: true,
-                              onChanged: (Null) {
-                                setState(() {
-                                  _topProduct = null;
-                                });
-                              },
+                              onChanged: null,
                             ),
                           ),
                         ],

@@ -6,7 +6,7 @@ import 'compkyc.dart';
 
 // import '../form2.dart';
 
-enum ProductType { Gold, Silver, Dimond, Blank }
+enum ProductType { Yes, No }
 
 class FetchcKYC extends StatefulWidget {
   const FetchcKYC({super.key});
@@ -16,13 +16,13 @@ class FetchcKYC extends StatefulWidget {
 }
 
 class _FetchcKYCState extends State<FetchcKYC> {
-  String? consent;
+  ProductType? _productType;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Credit Card"),
+        title: const Text("KYC Module"),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),
@@ -40,10 +40,8 @@ class _FetchcKYCState extends State<FetchcKYC> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Row(
-                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Align(alignment: Alignment.topRight, child: Text("3/4"))
-                ],
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [Text(" "), Text("3/4")],
               ),
               const SizedBox(height: 10),
               const StepProgressIndicator(
@@ -208,13 +206,13 @@ class _FetchcKYCState extends State<FetchcKYC> {
                             constraints: const BoxConstraints(
                               maxWidth: 300,
                             ),
-                            child: RadioListTile(
+                            child: RadioListTile<ProductType>(
                               title: const Text("Yes"),
-                              value: "Yes",
-                              groupValue: context,
+                              value: ProductType.Yes,
+                              groupValue: _productType,
                               onChanged: (value) {
                                 setState(() {
-                                  var consent = value.toString();
+                                  _productType = value;
                                 });
                               },
                             ),
@@ -226,11 +224,11 @@ class _FetchcKYCState extends State<FetchcKYC> {
                             ),
                             child: RadioListTile(
                               title: const Text("No"),
-                              value: "No",
-                              groupValue: context,
+                              value: ProductType.No,
+                              groupValue: _productType,
                               onChanged: (value) {
                                 setState(() {
-                                  var consent = value.toString();
+                                  _productType = value;
                                 });
                               },
                             ),

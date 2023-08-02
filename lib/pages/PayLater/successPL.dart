@@ -37,7 +37,7 @@ class _SuccessPayLaterState extends State<SuccessPayLater> {
                 height: 20,
               ),
               const Text(
-                "Hi Sakshi,",
+                "Hello Sakshi,",
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
               ),
               const SizedBox(
@@ -56,7 +56,7 @@ class _SuccessPayLaterState extends State<SuccessPayLater> {
                         child: Image.asset('assets/rocket.gif'),
                       ),
                       const Text(
-                        'Thank you for your details',
+                        'Success!',
                         style: TextStyle(
                           color: Color(0xff0025BA),
                           fontSize: 16,
@@ -65,7 +65,7 @@ class _SuccessPayLaterState extends State<SuccessPayLater> {
                       ),
                       const SizedBox(height: 10),
                       const Text(
-                        'KYC completion is subject to further checks. We will send the update on your registered mobile number ending with 8767',
+                        'We have successfully disbursed ₹60,000 in your bank account ending with 1234',
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w400,

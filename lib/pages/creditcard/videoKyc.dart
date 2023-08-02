@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sar/pages/creditcard/video.dart';
+import 'package:sar/pages/HL/successHL.dart';
 
 class VideoKYC extends StatefulWidget {
   const VideoKYC({super.key});
@@ -61,7 +62,7 @@ class _VideoKYCState extends State<VideoKYC> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Success(),
+                          builder: (context) => SuccessHL(),
                         ),
                       );
                     },

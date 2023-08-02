@@ -13,6 +13,8 @@ class Cardimage extends StatefulWidget {
 }
 
 class _CardimageState extends State<Cardimage> {
+  ProductType? _productType;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,7 +55,7 @@ class _CardimageState extends State<Cardimage> {
               ),
             ),
             const SizedBox(
-              height: 27,
+              height: 20,
             ),
             const Text(
               'Select a card that suit your needs                             ',
@@ -62,57 +64,76 @@ class _CardimageState extends State<Cardimage> {
               ),
             ),
             const SizedBox(
-              height: 27,
+              height: 20,
             ),
-            Padding(
-              padding: const EdgeInsets.all(1.0),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Custoinfo(),
+            Row(
+              children: [
+                Expanded(
+                  child: RadioListTile<ProductType>(
+                    contentPadding: const EdgeInsets.all(0.0),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5.0)),
+                    value: ProductType.Gold,
+                    groupValue: _productType,
+                    title: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(18.0),
+                          child: Image.asset(
+                            "assets/cardone.png",
+                            fit: BoxFit.cover,
+                            width: 252,
+                            height: 159,
+                          ),
+                        ),
+                      ],
                     ),
-                  );
-                },
-                child: Padding(
-                  padding: const EdgeInsets.all(18.0),
-                  child: Image.asset(
-                    "assets/cardone.png",
-                    fit: BoxFit.cover,
-                    width: 340,
-                    height: 140,
+                    dense: true,
+                    onChanged: (value) {
+                      setState(() {
+                        _productType = value;
+                      });
+                    },
                   ),
                 ),
-              ),
+              ],
             ),
-            const SizedBox(
-              height: 18,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(1.0),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Custoinfo(),
+            Row(
+              children: [
+                Expanded(
+                  child: RadioListTile<ProductType>(
+                    contentPadding: const EdgeInsets.all(0.0),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5.0)),
+                    value: ProductType.Silver,
+                    groupValue: _productType,
+                    title: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(18.0),
+                          child: Image.asset(
+                            "assets/cardtwo.png",
+                            fit: BoxFit.cover,
+                            width: 252,
+                            height: 159,
+                          ),
+                        ),
+                      ],
                     ),
-                  );
-                },
-                child: Padding(
-                  padding: const EdgeInsets.all(18.0),
-                  child: Image.asset(
-                    "assets/cardtwo.png",
-                    fit: BoxFit.cover,
-                    width: 340,
-                    height: 140,
+                    dense: true,
+                    onChanged: (value) {
+                      setState(() {
+                        _productType = value;
+                      });
+                    },
                   ),
                 ),
-              ),
+              ],
             ),
             const SizedBox(
-              height: 80,
+              height: 10,
             ),
             Align(
               alignment: Alignment.bottomCenter,

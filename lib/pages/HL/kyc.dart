@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sar/pages/HL/vKYC.dart';
+import 'package:sar/pages/creditcard/videoKyc.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 enum ProductType { Gold, Silver, Dimond, Blank }

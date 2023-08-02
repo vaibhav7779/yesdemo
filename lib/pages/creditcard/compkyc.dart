@@ -1,5 +1,8 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:sar/pages/creditcard/videoKyc.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 // import 'package:sar/pages/common/videoKyc.dart';
 
 import 'success.dart';
@@ -38,7 +41,18 @@ class _KYCState extends State<KYC> {
               const SizedBox(
                 height: 20,
               ),
-              const Text("Progress bar"),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Align(alignment: Alignment.topRight, child: Text("4/4"))
+                ],
+              ),
+              const SizedBox(height: 10),
+              const StepProgressIndicator(
+                totalSteps: 4,
+                currentStep: 4,
+                selectedColor: Color(0xff022DDB),
+              ),
               const SizedBox(
                 height: 40,
               ),

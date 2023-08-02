@@ -246,12 +246,12 @@ class _SelectProductState extends State<SelectProduct> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  PreApprovedOfferPL(), //Change to valid path
-                            ),
-                          );
+                          // Navigator.of(context).push(
+                          //   MaterialPageRoute(
+                          //     builder: (context) =>
+                          //         PreApprovedOfferPL(), //Change to valid path
+                          //   ),
+                          // );
                         },
                         child: SizedBox(
                           width: MediaQuery.of(context).size.width * 0.45,
@@ -298,12 +298,12 @@ class _SelectProductState extends State<SelectProduct> {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  PreApprovedOfferPL(), //Change to valid path
-                            ),
-                          );
+                          // Navigator.of(context).push(
+                          //   MaterialPageRoute(
+                          //     builder: (context) =>
+                          //         PreApprovedOfferPL(), //Change to valid path
+                          //   ),
+                          // );
                         },
                         child: SizedBox(
                           width: MediaQuery.of(context).size.width * 0.45,

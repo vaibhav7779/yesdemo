@@ -1,11 +1,6 @@
-// ignore_for_file: unused_import
-
 import 'package:flutter/material.dart';
-import 'package:sar/pages/creditcard/videoKyc.dart';
-import 'package:step_progress_indicator/step_progress_indicator.dart';
 // import 'package:sar/pages/common/videoKyc.dart';
 
-import 'success.dart';
 import 'customerinfo.dart';
 
 enum ProductType { Gold, Silver, Dimond, Blank }
@@ -19,12 +14,13 @@ class KYC extends StatefulWidget {
 
 class _KYCState extends State<KYC> {
   ProductType? _productType;
+  bool? _topProduct = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Credit Card"),
+        title: const Text("Personal Loan"),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),
@@ -41,18 +37,7 @@ class _KYCState extends State<KYC> {
               const SizedBox(
                 height: 20,
               ),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Align(alignment: Alignment.topRight, child: Text("4/4"))
-                ],
-              ),
-              const SizedBox(height: 10),
-              const StepProgressIndicator(
-                totalSteps: 4,
-                currentStep: 4,
-                selectedColor: Color(0xff022DDB),
-              ),
+              const Text("Progress bar"),
               const SizedBox(
                 height: 40,
               ),
@@ -145,7 +130,11 @@ class _KYCState extends State<KYC> {
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(5.0)),
                               value: ProductType.Silver,
-                              groupValue: _productType,
+                              groupValue: null,
+                              activeColor: Colors.grey,
+                              selectedTileColor: Colors.grey,
+                              //tileColor: Colors.grey,
+                              hoverColor: Colors.grey,
                               title: const Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -154,6 +143,7 @@ class _KYCState extends State<KYC> {
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold),
+                                    selectionColor: Colors.grey,
                                   ),
                                   SizedBox(
                                     height: 12,
@@ -170,9 +160,9 @@ class _KYCState extends State<KYC> {
                                 ],
                               ),
                               dense: true,
-                              onChanged: (value) {
+                              onChanged: (Null) {
                                 setState(() {
-                                  _productType = value;
+                                  _topProduct = null;
                                 });
                               },
                             ),
@@ -195,7 +185,7 @@ class _KYCState extends State<KYC> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => VideoKYC(),
+                          builder: (context) => Custoinfo(),
                         ),
                       );
                     },

@@ -208,7 +208,7 @@ class _PermanentAddressState extends State<PermanentAddress> {
                                 title: const Text("Yes"),
                                 value: "Yes",
                                 groupValue: consent,
-                                onChanged: null,
+                                onChanged: (value) {},
                               ),
                             ),
                           ),

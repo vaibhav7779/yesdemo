@@ -171,7 +171,7 @@ class _KYCState extends State<KYC> {
                                 ],
                               ),
                               dense: true,
-                              onChanged: null,
+                              onChanged: (value) {},
                             ),
                           ),
                         ],

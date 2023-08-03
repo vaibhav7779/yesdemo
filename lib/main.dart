@@ -2,6 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:sar/pages/HL/kyc.dart';
+import 'package:sar/pages/creditcard/customerinfo.dart';
 // import 'package:sar/pages/HL/offer_hl.dart';
 // import 'package:sar/pages/PayLater/offer.dart';
 // import 'package:sar/pages/common/adharConfirmation.dart';
@@ -63,7 +65,7 @@ class _MyAppState extends State<MyApp> {
       //     return const HomePage();
       //   },
       // ),
-      home: HomePage(),
+      home: KYC_HL(),
       // home: BasicInformation(),
       theme: ThemeData(
         // AppBar theme

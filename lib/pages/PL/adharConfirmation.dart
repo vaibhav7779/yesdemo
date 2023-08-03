@@ -149,7 +149,7 @@ class _CustomerConfirmationPLState extends State<CustomerConfirmationPL> {
                                 ],
                               ),
                               dense: true,
-                              onChanged: null,
+                              onChanged: (value) {},
                             ),
                           ),
                         ],

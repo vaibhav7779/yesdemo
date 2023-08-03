@@ -1,6 +1,7 @@
 // ignore_for_file: unused_import
 
 import 'package:flutter/material.dart';
+import 'package:sar/pages/homePage.dart';
 // import 'package:intl/intl.dart' as intl;
 // import 'package:sar/global.dart' as globals;
 
@@ -91,7 +92,7 @@ class _SuccessState extends State<Success> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Success(),
+                          builder: (context) => HomePage(),
                         ),
                       );
                     },

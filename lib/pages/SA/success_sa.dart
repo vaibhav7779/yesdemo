@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart' as intl;
 import 'package:sar/global.dart' as globals;
+import 'package:sar/pages/homePage.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 class SuccessSA extends StatefulWidget {
@@ -87,12 +88,12 @@ class _SuccessSAState extends State<SuccessSA> {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => SuccessSA(),
-                      //   ),
-                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => HomePage(),
+                        ),
+                      );
                     },
                     child: const Text("Submit"),
                   ),

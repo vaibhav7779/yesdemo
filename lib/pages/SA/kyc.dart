@@ -158,7 +158,7 @@ class _KYC_SAState extends State<KYC_SA> {
                                     height: 12,
                                   ),
                                   Text(
-                                    'We will collect your biometric details for paperless KYC_SA',
+                                    'We will collect your biometric details for paperless KYC',
                                     style: TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w400),

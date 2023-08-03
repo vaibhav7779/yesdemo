@@ -118,21 +118,18 @@ class _SelectProductState extends State<SelectProduct> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8.0),
                             ),
-                            child: const Column(
+                            child: Column(
                               children: [
                                 Padding(
-                                  padding: EdgeInsets.symmetric(
+                                  padding: const EdgeInsets.symmetric(
                                       horizontal: 14, vertical: 14),
                                   child: Column(
                                     children: [
-                                      ImageIcon(
-                                        AssetImage("assets/savings.png"),
-                                        size: 30,
-                                      ),
-                                      SizedBox(
+                                      Image.asset('assets/savings.jpg'),
+                                      const SizedBox(
                                         height: 10,
                                       ),
-                                      Text(
+                                      const Text(
                                         "Open Savings A/C",
                                         style: TextStyle(
                                             fontSize: 12,
@@ -167,21 +164,18 @@ class _SelectProductState extends State<SelectProduct> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8.0),
                             ),
-                            child: const Column(
+                            child: Column(
                               children: [
                                 Padding(
-                                  padding: EdgeInsets.symmetric(
+                                  padding: const EdgeInsets.symmetric(
                                       horizontal: 14, vertical: 14),
                                   child: Column(
                                     children: [
-                                      ImageIcon(
-                                        AssetImage("assets/personal.png"),
-                                        size: 30,
-                                      ),
-                                      SizedBox(
+                                      Image.asset('assets/PL.jpg'),
+                                      const SizedBox(
                                         height: 10,
                                       ),
-                                      Text(
+                                      const Text(
                                         "Get Personal Loan",
                                         style: TextStyle(
                                             fontSize: 12,
@@ -221,21 +215,18 @@ class _SelectProductState extends State<SelectProduct> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8.0),
                             ),
-                            child: const Column(
+                            child: Column(
                               children: [
                                 Padding(
-                                  padding: EdgeInsets.symmetric(
+                                  padding: const EdgeInsets.symmetric(
                                       horizontal: 14, vertical: 14),
                                   child: Column(
                                     children: [
-                                      ImageIcon(
-                                        AssetImage("assets/pay_later.png"),
-                                        size: 30,
-                                      ),
-                                      SizedBox(
+                                      Image.asset('assets/pay_later.jpg'),
+                                      const SizedBox(
                                         height: 10,
                                       ),
-                                      Text(
+                                      const Text(
                                         "Get Pay later",
                                         style: TextStyle(
                                             fontSize: 12,
@@ -270,21 +261,18 @@ class _SelectProductState extends State<SelectProduct> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8.0),
                             ),
-                            child: const Column(
+                            child: Column(
                               children: [
                                 Padding(
-                                  padding: EdgeInsets.symmetric(
+                                  padding: const EdgeInsets.symmetric(
                                       horizontal: 14, vertical: 14),
                                   child: Column(
                                     children: [
-                                      ImageIcon(
-                                        AssetImage("assets/cc.png"),
-                                        size: 30,
-                                      ),
-                                      SizedBox(
+                                      Image.asset('assets/CC.jpg'),
+                                      const SizedBox(
                                         height: 10,
                                       ),
-                                      Text(
+                                      const Text(
                                         "Get Credit Card",
                                         style: TextStyle(
                                             fontSize: 12,
@@ -322,21 +310,18 @@ class _SelectProductState extends State<SelectProduct> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8.0),
                             ),
-                            child: const Column(
+                            child: Column(
                               children: [
                                 Padding(
-                                  padding: EdgeInsets.symmetric(
+                                  padding: const EdgeInsets.symmetric(
                                       horizontal: 14, vertical: 14),
                                   child: Column(
                                     children: [
-                                      ImageIcon(
-                                        AssetImage("assets/forex.png"),
-                                        size: 30,
-                                      ),
-                                      SizedBox(
+                                      Image.asset('assets/forex.jpg'),
+                                      const SizedBox(
                                         height: 10,
                                       ),
-                                      Text(
+                                      const Text(
                                         "Get Forex Card",
                                         style: TextStyle(
                                             fontSize: 12,
@@ -371,21 +356,18 @@ class _SelectProductState extends State<SelectProduct> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8.0),
                             ),
-                            child: const Column(
+                            child: Column(
                               children: [
                                 Padding(
-                                  padding: EdgeInsets.symmetric(
+                                  padding: const EdgeInsets.symmetric(
                                       horizontal: 14, vertical: 14),
                                   child: Column(
                                     children: [
-                                      ImageIcon(
-                                        AssetImage("assets/home_loan.png"),
-                                        size: 30,
-                                      ),
-                                      SizedBox(
+                                      Image.asset('assets/HL.jpg'),
+                                      const SizedBox(
                                         height: 10,
                                       ),
-                                      Text(
+                                      const Text(
                                         "Get Home Loan",
                                         style: TextStyle(
                                             fontSize: 12,

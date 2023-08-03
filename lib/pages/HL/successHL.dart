@@ -32,6 +32,7 @@ class _SuccessHLState extends State<SuccessHL> {
           padding: const EdgeInsets.all(20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(
                 height: 20,

@@ -115,21 +115,21 @@ class _HomePageState extends State<HomePage> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8.0),
                             ),
-                            child: const Column(
+                            child: Column(
                               children: [
                                 Padding(
-                                  padding: EdgeInsets.symmetric(
+                                  padding: const EdgeInsets.symmetric(
                                       horizontal: 14, vertical: 14),
                                   child: Column(
                                     children: [
-                                      ImageIcon(
-                                        AssetImage("assets/Vector.png"),
-                                        size: 30,
+                                      const SizedBox(
+                                        height: 6,
                                       ),
-                                      SizedBox(
-                                        height: 10,
+                                      Image.asset('assets/customer.jpg'),
+                                      const SizedBox(
+                                        height: 4,
                                       ),
-                                      Text(
+                                      const Text(
                                         "Customer",
                                         style: TextStyle(
                                             fontSize: 12,
@@ -163,21 +163,18 @@ class _HomePageState extends State<HomePage> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8.0),
                             ),
-                            child: const Column(
+                            child: Column(
                               children: [
                                 Padding(
-                                  padding: EdgeInsets.symmetric(
+                                  padding: const EdgeInsets.symmetric(
                                       horizontal: 14, vertical: 14),
                                   child: Column(
                                     children: [
-                                      ImageIcon(
-                                        AssetImage("assets/bank_rep.png"),
-                                        size: 30,
-                                      ),
-                                      SizedBox(
+                                      Image.asset('assets/BR.jpg'),
+                                      const SizedBox(
                                         height: 10,
                                       ),
-                                      Text(
+                                      const Text(
                                         "Bank Representative",
                                         style: TextStyle(
                                             fontSize: 12,

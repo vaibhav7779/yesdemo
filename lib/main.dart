@@ -68,7 +68,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         // AppBar theme
         // primarySwatch: buildMaterialColor(Color(0xFFF7B61A)),
-        primaryColor: Color(0xffF7B61A),
+        primaryColor: Color(0xff022DDB),
         appBarTheme: const AppBarTheme(
             backgroundColor: Color(0xff022DDB), centerTitle: false),
 

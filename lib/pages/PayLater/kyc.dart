@@ -155,7 +155,7 @@ class _KYC_PayLaterState extends State<KYC_PayLater> {
                                     height: 12,
                                   ),
                                   Text(
-                                    'We will collect your biometric details for paperless KYC_PayLater',
+                                    'We will collect your biometric details for paperless KYC',
                                     style: TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w400),

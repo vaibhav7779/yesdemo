@@ -98,7 +98,7 @@ class _KYC_PLState extends State<KYC_PL> {
                               Padding(
                                 padding: EdgeInsets.only(bottom: 12.0),
                                 child: Text(
-                                  'Fast and paperless KYC_PL verification',
+                                  'Fast and paperless KYC verification',
                                   style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.w400),
@@ -151,7 +151,7 @@ class _KYC_PLState extends State<KYC_PL> {
                                     height: 12,
                                   ),
                                   Text(
-                                    'We will collect your biometric details for paperless KYC_PL',
+                                    'We will collect your biometric details for paperless KYC',
                                     style: TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w400),

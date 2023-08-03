@@ -118,9 +118,9 @@ class _CustoinfoState extends State<Custoinfo> {
                                 ],
                               ),
                               dense: true,
-                              onChanged: (value) {
+                              onChanged: (Null) {
                                 setState(() {
-                                  _productType = value;
+                                  _productType = null;
                                 });
                               },
                             ),
@@ -152,7 +152,11 @@ class _CustoinfoState extends State<Custoinfo> {
                                 ],
                               ),
                               dense: true,
-                              onChanged: null,
+                              onChanged: (value) {
+                                setState(() {
+                                  _productType = value;
+                                });
+                              },
                             ),
                           ),
                         ],

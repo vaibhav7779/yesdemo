@@ -148,7 +148,7 @@ class _CustomerConfirmationHLState extends State<CustomerConfirmationHL> {
                                 ],
                               ),
                               dense: true,
-                              onChanged: null,
+                              onChanged: (value) {},
                             ),
                           ),
                         ],

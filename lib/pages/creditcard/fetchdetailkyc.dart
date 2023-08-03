@@ -210,9 +210,9 @@ class _FetchcKYCState extends State<FetchcKYC> {
                               title: const Text("Yes"),
                               value: ProductType.Yes,
                               groupValue: _productType,
-                              onChanged: (value) {
+                              onChanged: (Null) {
                                 setState(() {
-                                  _productType = value;
+                                  _productType = null;
                                 });
                               },
                             ),

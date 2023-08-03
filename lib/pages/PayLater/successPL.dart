@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart' as intl;
 import 'package:sar/global.dart' as globals;
+import 'package:sar/pages/homePage.dart';
 
 class SuccessPayLater extends StatefulWidget {
   const SuccessPayLater({super.key});
@@ -83,12 +84,12 @@ class _SuccessPayLaterState extends State<SuccessPayLater> {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => SuccessPayLater(),
-                      //   ),
-                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => HomePage(),
+                        ),
+                      );
                     },
                     child: const Text("Submit"),
                   ),
